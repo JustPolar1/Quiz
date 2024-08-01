@@ -60,7 +60,21 @@ namespace Quiz
                         break;
                     // Las demás preguntas deberán tener un formato similar
                     case (2):
-                        Console.WriteLine("Pregunta 2");
+                        Console.WriteLine("¿En qué país está el famosos Machu Pichu?");
+                        Console.WriteLine("\ta) Chile");
+                        Console.WriteLine("\tb) Estados Unidos");
+                        Console.WriteLine("\tc) Perú");
+                        Console.WriteLine("\td) México");
+
+                        respuesta = Console.ReadLine().ToLower();
+                        if (respuesta == "c" || respuesta == "peru" || respuesta == "perú")
+                        {
+                            respuestaCorrecta = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: Perú");
+                        }
                         break;
                     case (3):
                         Console.WriteLine("Pregunta 3");
