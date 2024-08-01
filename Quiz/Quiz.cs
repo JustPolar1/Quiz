@@ -31,20 +31,11 @@ namespace Quiz
             {
                 Console.WriteLine("Respuesta incorrecta, la respuesta correcta era Montevideo");
             }
-
-            // Comentarios completamente sanos acerca del código y la raza negra
-
             Console.WriteLine();
 
-            // Bloque de código que se actualizará una vez el programa haya terminado de nuevo
-            // hooola creaturitas del señor
-            // hwllo
             Console.Write("Enter para continuar ");
             Console.ReadLine();
             Console.Clear();
-
-            hola vengo a cagarla
-
         }
         public virtual void Intermedio(Concursante concursante)
         {
