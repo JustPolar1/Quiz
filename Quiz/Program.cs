@@ -10,16 +10,14 @@ namespace Quiz
     {
         static void Main(string[] args)
         {
-            //comentario de prueba 
             // Prueba, esto no va a estar en la versión final.
             Concursante Avril = new Concursante();
             Avril.Nombre = "Avril";
 
             Quiz quiz = new Quiz();
-            quiz.Basico(Avril);
-            quiz.Basico(Avril);
-            quiz.Basico(Avril);
-            quiz.Basico(Avril);
+            Ciencias quizCiencias = new Ciencias();
+
+            quizCiencias.Basico(Avril);
 
             //Esto no lo pondremos en las preguntas, se pone al final
             Console.WriteLine($"{Avril.Nombre} tiene: {Avril.Puntos} punto(s)");
