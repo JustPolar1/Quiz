@@ -77,7 +77,7 @@ namespace Quiz
                         }
                         break;
                     case (3):
-                        Console.WriteLine("Pregunta 3");
+                        Console.WriteLine("");
                         break;
                     default:
                         break;
