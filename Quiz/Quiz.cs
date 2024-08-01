@@ -34,6 +34,8 @@ namespace Quiz
 
             // Puse este comentario
 
+            // Puse este otro mensaje
+
             Console.WriteLine();
 
             Console.Write("Enter para continuar ");
