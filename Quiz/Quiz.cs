@@ -36,6 +36,9 @@ namespace Quiz
 
             Console.WriteLine();
 
+            // Bloque de código que se actualizará una vez el programa haya terminado de nuevo
+            // hooola creaturitas del señor
+            // hwllo
             Console.Write("Enter para continuar ");
             Console.ReadLine();
             Console.Clear();
