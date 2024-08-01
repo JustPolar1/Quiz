@@ -23,6 +23,9 @@ namespace Quiz
         // Cada método de cada categoría generará UNA pregunta aleatoria de esa categoría dependiendo la dificultad
         public virtual void Basico(Concursante concursante)
         { 
+            // hola prueba
+
+
             // Primero se comprueba si quedan preguntas en esta categoría
             if (preguntasBasicas.Count == 0)
             {
