@@ -80,7 +80,7 @@ namespace Quiz
             }
 
 
-            // Protocolo de finalización de la fase
+            // Protocolo de finalización de la fase, agregar siempre.
             Console.WriteLine();
 
             Console.Write("Enter para continuar ");
