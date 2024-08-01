@@ -32,9 +32,7 @@ namespace Quiz
                 Console.WriteLine("Respuesta incorrecta, la respuesta correcta era Montevideo");
             }
 
-            // Puse este comentario
-
-            // Puse este otro mensaje
+            // Comentarios completamente sanos acerca del código y la raza negra
 
             Console.WriteLine();
 
