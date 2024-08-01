@@ -43,6 +43,8 @@ namespace Quiz
             Console.ReadLine();
             Console.Clear();
 
+            hola vengo a cagarla
+
         }
         public virtual void Intermedio(Concursante concursante)
         {

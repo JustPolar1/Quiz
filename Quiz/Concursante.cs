@@ -13,5 +13,5 @@ namespace Quiz
 
         public string Nombre { get => nombre; set => nombre = value; }
         public int Puntos { get => puntos; set => puntos = value; }
-    }
+    } 
 }
