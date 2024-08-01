@@ -12,12 +12,16 @@ namespace Quiz
         {
             // Prueba, esto no va a estar en la versión final.
             Concursante Avril = new Concursante();
+            Avril.Nombre = "Avril";
 
             Quiz quiz = new Quiz();
             quiz.Basico(Avril);
+            quiz.Basico(Avril);
+            quiz.Basico(Avril);
+            quiz.Basico(Avril);
 
             //Esto no lo pondremos en las preguntas, se pone al final
-            Console.WriteLine($"Avril tiene: {Avril.Puntos} punto(s)");
+            Console.WriteLine($"{Avril.Nombre} tiene: {Avril.Puntos} punto(s)");
 
             Console.ReadKey();
         }
