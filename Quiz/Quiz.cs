@@ -14,6 +14,7 @@ namespace Quiz
         private string respuesta;
         private bool respuestaCorrecta = false;
         // Variable que almacenará el número de preguntas aleatorias
+        // ESTO DEJARLO COMO PROTECTED
         protected List<int> preguntasBasicas = new List<int>()
         {
             1, 2, 3, 4, 5, 6, 7, 8, 9, 10
@@ -117,11 +118,12 @@ namespace Quiz
         }
         public virtual void Intermedio(Concursante concursante)
         {
+            // EN VEZ DE USAR `preguntasBasicas` USAR `preguntasIntermedias`
 
         }
         public virtual void Avanzado(Concursante concursante) 
         {
-            
+            // EN VEZ DE USAR `preguntasBasicas` USAR `preguntasAvanzadas`            
         }
     }
 }
