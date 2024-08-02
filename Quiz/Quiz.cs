@@ -18,6 +18,14 @@ namespace Quiz
         {
             1, 2, 3, 4, 5, 6, 7, 8, 9, 10
         };
+        protected List<int> preguntasIntermedias = new List<int>()
+        {
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
+        protected List<int> preguntasAvanzadas = new List<int>()
+        {
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
 
         public string Respuesta { get => respuesta; set => respuesta = value; }
         public bool RespuestaCorrecta { get => respuestaCorrecta; set => respuestaCorrecta = value; }
