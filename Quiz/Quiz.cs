@@ -13,8 +13,7 @@ namespace Quiz
         // Variable que almacenará las respuestas del usuario
         private string respuesta;
         private bool respuestaCorrecta = false;
-
-        // Variable que almacenará el número de preguntas 
+        // Variable que almacenará el número de preguntas aleatorias
         protected List<int> preguntasBasicas = new List<int>()
         {
             1, 2, 3, 4, 5, 6, 7, 8, 9, 10
@@ -51,12 +50,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                         // Se evalúa si se dio una respuesta correcta o no
-                        if (respuesta.ToLower() == "a" || respuesta.ToLower() == "Montevideo")
+                        if (Respuesta.ToLower() == "a" || Respuesta.ToLower() == "Montevideo")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            respuestaCorrecta = true;
+                            RespuestaCorrecta = true;
                         }
                         else
                         {
@@ -89,7 +88,7 @@ namespace Quiz
                         break;
                 }
                 // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
-                if (respuestaCorrecta)
+                if (RespuestaCorrecta)
                 {
                     Console.WriteLine("¡Respuesta correcta!");
                     Console.WriteLine($"¡{concursante.Nombre} Recibe un punto!");
@@ -107,7 +106,7 @@ namespace Quiz
             Console.ReadLine();
             Console.Clear();
             // Se devuelve a su estado original la variable de respuesta correcta
-            respuestaCorrecta = false;
+            RespuestaCorrecta = false;
         }
         public virtual void Intermedio(Concursante concursante)
         {
