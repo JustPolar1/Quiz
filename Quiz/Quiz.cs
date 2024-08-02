@@ -11,8 +11,8 @@ namespace Quiz
     internal class Quiz
     {
         // Variable que almacenará las respuestas del usuario
-        private string Respuesta;
-        private bool RespuestaCorrecta = false;
+        private string respuesta;
+        private bool respuestaCorrecta = false;
         // Variable que almacenará el número de preguntas aleatorias
         // ESTO DEJARLO COMO PROTECTED
         protected List<int> preguntasBasicas = new List<int>()
