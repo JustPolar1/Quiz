@@ -13,16 +13,29 @@ namespace Quiz
         // Variable que almacenará las respuestas del usuario
         private string respuesta;
         private bool respuestaCorrecta = false;
-
         // Variable que almacenará el número de preguntas aleatorias
-        private List<int> preguntasBasicas = new List<int>()
+        // ESTO DEJARLO COMO PROTECTED
+        protected List<int> preguntasBasicas = new List<int>()
         {
-            1, 2, 3
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
         };
+        protected List<int> preguntasIntermedias = new List<int>()
+        {
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
+        protected List<int> preguntasAvanzadas = new List<int>()
+        {
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
+        public string Respuesta { get => respuesta; set => respuesta = value; }
+        public bool RespuestaCorrecta { get => respuestaCorrecta; set => respuestaCorrecta = value; }
 
         // Cada método de cada categoría generará UNA pregunta aleatoria de esa categoría dependiendo la dificultad
         public virtual void Basico(Concursante concursante)
         { 
+            // hola prueba
+
+
             // Primero se comprueba si quedan preguntas en esta categoría
             if (preguntasBasicas.Count == 0)
             {
@@ -45,12 +58,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                         // Se evalúa si se dio una respuesta correcta o no
-                        if (respuesta.ToLower() == "a" || respuesta.ToLower() == "Montevideo")
+                        if (Respuesta.ToLower() == "a" || Respuesta.ToLower() == "Montevideo")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            respuestaCorrecta = true;
+                            RespuestaCorrecta = true;
                         }
                         else
                         {
@@ -60,16 +73,30 @@ namespace Quiz
                         break;
                     // Las demás preguntas deberán tener un formato similar
                     case (2):
-                        Console.WriteLine("Pregunta 2");
+                        Console.WriteLine("¿En qué país está el famosos Machu Pichu?");
+                        Console.WriteLine("\ta) Chile");
+                        Console.WriteLine("\tb) Estados Unidos");
+                        Console.WriteLine("\tc) Perú");
+                        Console.WriteLine("\td) México");
+
+                        respuesta = Console.ReadLine().ToLower();
+                        if (respuesta == "c" || respuesta == "peru" || respuesta == "perú")
+                        {
+                            respuestaCorrecta = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: Perú");
+                        }
                         break;
                     case (3):
-                        Console.WriteLine("Pregunta 3");
+                        Console.WriteLine("");
                         break;
                     default:
                         break;
                 }
                 // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
-                if (respuestaCorrecta)
+                if (RespuestaCorrecta)
                 {
                     Console.WriteLine("¡Respuesta correcta!");
                     Console.WriteLine($"¡{concursante.Nombre} Recibe un punto!");
@@ -87,7 +114,7 @@ namespace Quiz
             Console.ReadLine();
             Console.Clear();
             // Se devuelve a su estado original la variable de respuesta correcta
-            respuestaCorrecta = false;
+            RespuestaCorrecta = false;
         }
         public virtual void Intermedio(Concursante concursante)
         {
@@ -112,6 +139,7 @@ namespace Quiz
                         Console.Write("Escribe tu respuesta: ");
 
                         Console.WriteLine();
+
 
                         respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                         // Se evalúa si se dio una respuesta correcta o no
@@ -160,7 +188,7 @@ namespace Quiz
     }
         public virtual void Avanzado(Concursante concursante) 
         {
-            
+            // EN VEZ DE USAR `preguntasBasicas` USAR `preguntasAvanzadas`             
         }
     }
 }
