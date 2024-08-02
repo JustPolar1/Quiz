@@ -13,11 +13,10 @@ namespace Quiz
         // Variable que almacenará las respuestas del usuario
         private string respuesta;
         private bool respuestaCorrecta = false;
-
         // Variable que almacenará el número de preguntas aleatorias
         protected List<int> preguntasBasicas = new List<int>()
         {
-            1, 2, 3
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
         };
 
         public string Respuesta { get => respuesta; set => respuesta = value; }
