@@ -123,7 +123,7 @@ namespace Quiz
         }
         public virtual void Avanzado(Concursante concursante) 
         {
-            // EN VEZ DE USAR `preguntasBasicas` USAR `preguntasAvanzadas`            
+            // EN VEZ DE USAR `preguntasBasicas` USAR `preguntasAvanzadas`             
         }
     }
 }
