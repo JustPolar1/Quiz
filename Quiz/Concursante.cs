@@ -10,6 +10,11 @@ namespace Quiz
     {
         private string nombre;
         private int puntos;
+        // Se crea el constructor para los concursantes, solo hará falta el nombre del concursante
+        public Concursante(string nombre)
+        {
+            this.nombre = nombre;
+        }
 
         public string Nombre { get => nombre; set => nombre = value; }
         public int Puntos { get => puntos; set => puntos = value; }

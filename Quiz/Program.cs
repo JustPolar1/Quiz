@@ -11,8 +11,7 @@ namespace Quiz
         static void Main(string[] args)
         {
             // Prueba, esto no va a estar en la versión final.
-            Concursante Avril = new Concursante();
-            Avril.Nombre = "Avril";
+            Concursante Avril = new Concursante("Avril");
 
             Quiz quiz = new Quiz();
             Ciencias quizCiencias = new Ciencias();
