@@ -26,16 +26,27 @@ namespace Quiz
                 {
                     Console.WriteLine("¡Buena ronda! ¿te gustaría cambiar el modo de juego? Escribe 1 si es el caso, sino solo presiona cualquier tecla");
                     Console.Write("¿Qué te gustaría hacer?: ");
+
                     switch (Console.ReadKey().Key)
                     {
+                        case ConsoleKey.NumPad1:
                         case ConsoleKey.D1:
+                            Console.Clear();
                             multijugador = !multijugador;
                             // Operación ternaria dentro del writeline,
                             // el primer mensaje se muestra si la variable es true, la siguiente sino
                             Console.WriteLine(multijugador ? "¡Cambiaste a modo multijugador!" : "¡Cambiaste a modo solitario!");
                             cambio = true;
                             break;
+                        default:
+                            Console.Clear();
+                            Console.WriteLine(multijugador ? "¡Sigues en: multijugador!" : "¡Sigues en: solitario!");
+                            break;
                     }
+                    Console.WriteLine();
+                    Console.Write("Presiona cualquier tecla para continuar: ");
+                    Console.ReadKey(true);
+                    Console.Clear();
                 }
 
                 while (ronda == 1) // Ciclo de opciones de modo de juego
@@ -111,9 +122,33 @@ namespace Quiz
                     Console.ReadKey(true);
                 }
 
+                if (ronda == 1) // Solo se mostrará en la primera ronda
+                {
+                    Console.Clear();
+                    Console.WriteLine("Instrucciones:");
+                    Console.WriteLine("A continuación se mostrarán rondas de 5 preguntas de la categoría seleccionada para cada jugador");
+                    Console.WriteLine("La dificultad de cada pregunta será completamente aleatoria, y cada jugador recibirá la misma dificultad de preguntas");
+                    Console.WriteLine("Cada respuesta correcta se sumará 1 punto en el marcador");
+                    Console.WriteLine("El jugador con el mayor puntuaje será declarado ganador de esta ronda!");
+                    Console.WriteLine();
+                    Console.WriteLine("¡Buena suerte!");
+                    Console.ReadKey(true);
+                }
 
+                /* Lo que se implementará:
+                 * A continuación seguiría implementar la jugabilidad, tengo pensado que hayan 3 variables
+                 * que almacenen un número aleatorio, estas variable almacenarán el número de preguntas de 
+                 * cada dificultad que se dará en la ronda actual
+                 * Posibles problemas:
+                 * Que alguna de las variables sobre pase el número de preguntas disponibles en una dificultad
+                 * de una categoría, esto puede ser problemático, habría que crear un protocolo en ese caso
+                 * El número máximo de rondas que se puede jugar por categoría es de 6 rondas, pues las
+                 * 30 pregunas se habrían terminado en ese caso
+                 */
 
-                Console.ReadKey();
+                ronda++;
+                Console.ReadKey(true);
+                Console.Clear();
             } while (!terminar); // Todo el programa se ejecutará hasta que la variable de terminar sea verdadera
         }
     }
