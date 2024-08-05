@@ -29,16 +29,14 @@ namespace Quiz
                         Console.WriteLine("\tc) Francisco Villa");
                         Console.Write("Escribe tu respuesta: ");
 
-                        Console.WriteLine();
-
-                        Respuesta = Console.ReadLine(); 
-                        if (Respuesta.ToLower() == "a" || Respuesta.ToLower() == "Emiliano Zapata")
+                        Respuesta = Console.ReadLine().ToLower(); 
+                        if (Respuesta == "a" || Respuesta == "emiliano zapata")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Emiliano Zapata");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era a) Emiliano Zapata");
                         }
                         break;
                         
@@ -50,16 +48,14 @@ namespace Quiz
                         Console.WriteLine("\td) Todas las anteriores");
                         Console.Write("Escribe tu respuesta: ");
 
-                        Console.WriteLine();
-
-                        Respuesta = Console.ReadLine();
-                        if (Respuesta.ToLower() == "d" || Respuesta.ToLower() == "Todas las anteriores")
+                        Respuesta = Console.ReadLine().ToLower();
+                        if (Respuesta == "d" || Respuesta == "todas las anteriores")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Todas las anteriores");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era d) Todas las anteriores");
                         }
                         break;
                     case (3):
@@ -70,19 +66,150 @@ namespace Quiz
                         Console.WriteLine("\tc) Imperio Purépechas");
                         Console.Write("Escribe tu respuesta: ");
 
-                        Console.WriteLine();
-
-                        Respuesta = Console.ReadLine();
-                        if (Respuesta.ToLower() == "b" || Respuesta.ToLower() == "Imperio Azteca")
+                        Respuesta = Console.ReadLine().ToLower();
+                        if (Respuesta == "b" || Respuesta == "imperio azteca")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Imperio Azteca");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era b) Imperio Azteca");
                         }
                         break;
                     default:
+                        break;
+                    case (4):
+                        Console.WriteLine("¿En qué fecha empezó la Revolución Mexicana?");
+                        Console.WriteLine("\ta) 20 de noviembre de 1912 ");
+                        Console.WriteLine("\tb) 18 de noviembre de 1910");
+                        Console.WriteLine("\tc) 20 de noviembre de 1910");
+                        Console.WriteLine("\td) 18 de noviembre de 1912");
+                        Console.Write("Escribe tu respuesta: ");
+
+
+                        Respuesta = Console.ReadLine().ToLower();
+                        if (Respuesta== "c" || Respuesta == "20 de noviembre de 1910")
+                        {
+                            RespuestaCorrecta = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era d) 20 de noviembre de 1910");
+                        }
+                        break;
+                    case (5):
+                        Console.WriteLine("¿Quién dió el 'Grito de Dolores'?");
+                        Console.WriteLine("\ta) Ignacio Allende");
+                        Console.WriteLine("\tb) Guadalupe Victoria");
+                        Console.WriteLine("\tc) Miguel Hidalgo");
+                        Console.WriteLine("\td) José María Morelos");
+                        Console.Write("Escribe tu respuesta: ");
+
+
+                        Respuesta = Console.ReadLine().ToLower();
+                        if (Respuesta == "c" || Respuesta == "miguel hidalgo")
+                        {
+                            RespuestaCorrecta = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era c) Miguel Hidalgo");
+                        }
+                        break;
+                    case (6):
+                        Console.WriteLine("¿Cuánto duró la 'Guerra de Independencia'?");
+                        Console.WriteLine("\ta) 10 años");
+                        Console.WriteLine("\tb) 9 años");
+                        Console.WriteLine("\tc) 12 años");
+                        Console.WriteLine("\td) 11 años");
+                        Console.Write("Escribe tu respuesta: ");
+
+
+                        Respuesta = Console.ReadLine().ToLower();
+                        if (Respuesta == "d" || Respuesta == "11 años")
+                        {
+                            RespuestaCorrecta = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era d) 11 años");
+                        }
+                        break;
+                    case (7):
+                        Console.WriteLine("¿Quién estuvo en un calabozo en la Ciudad de Chihuahua?");
+                        Console.WriteLine("\ta) Miguel Hidalgo");
+                        Console.WriteLine("\tb) Francisco Villa");
+                        Console.WriteLine("\tc) Francisco I. Madero");
+                        Console.WriteLine("\td) Josefa Ortiz de Domínguez");
+                        Console.Write("Escribe tu respuesta: ");
+
+
+                        Respuesta = Console.ReadLine().ToLower();
+                        if (Respuesta == "a" || Respuesta == "miguel hidalgo")
+                        {
+                            RespuestaCorrecta = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era a) Miguel Hidalgo");
+                        }
+                        break;
+                    case (8):
+                        Console.WriteLine("¿Cuántos Niños Heroes eran?");
+                        Console.WriteLine("\ta) 5");
+                        Console.WriteLine("\tb) 6");
+                        Console.WriteLine("\tc) 8");
+                        Console.WriteLine("\td) 7");
+                        Console.Write("Escribe tu respuesta: ");
+
+
+                        Respuesta = Console.ReadLine().ToLower();
+                        if (Respuesta == "b" || Respuesta == "6" || Respuesta == "seis")
+                        {
+                            RespuestaCorrecta = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era b) 6");
+                        }
+                        break;
+                    case (9):
+                        Console.WriteLine("¿Cuándo ocurrió la 'Guerra de los Pasteles'?");
+                        Console.WriteLine("\ta) 21 de noviembre de 1838");
+                        Console.WriteLine("\tb) 19 de noviembre de 1838");
+                        Console.WriteLine("\tc) 19 de noviembre de 1840");
+                        Console.WriteLine("\td) 21 de noviembre de 1840");
+                        Console.Write("Escribe tu respuesta: ");
+
+
+                        Respuesta = Console.ReadLine().ToLower();
+                        if (Respuesta == "a" || Respuesta == "21 de noviembre de 1838")
+                        {
+                            RespuestaCorrecta = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era d)21 de noviembre de 1838");
+                        }
+                        break;
+                    case (10):
+                        Console.WriteLine("¿Cuánto duró el Porfiriato?");
+                        Console.WriteLine("\ta) 30 años");
+                        Console.WriteLine("\tb) 29 años");
+                        Console.WriteLine("\tc) 31 años");
+                        Console.WriteLine("\td) 35 años");
+                        Console.Write("Escribe tu respuesta: ");
+
+
+                        Respuesta = Console.ReadLine().ToLower();
+                        if (Respuesta == "a" || Respuesta == "30 años")
+                        {
+                            RespuestaCorrecta = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era a) 30 años");
+                        }
                         break;
                 }
                 // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
