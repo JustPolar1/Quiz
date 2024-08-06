@@ -32,7 +32,8 @@ namespace Quiz
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "c" || Respuesta.ToLower() == "Raices")
+
+                        if (respuesta.ToLower() == "c" || respuesta.ToLower() == "raices")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -55,7 +56,7 @@ namespace Quiz
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "b" || Respuesta.ToLower() == "Pulmones")
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "pulmones")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -77,7 +78,7 @@ namespace Quiz
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "a" || Respuesta.ToLower() == "Fotosintesis")
+                        if (respuesta.ToLower() == "a" || respuesta.ToLower() == "fotosintesis")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -99,7 +100,7 @@ namespace Quiz
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "c" || Respuesta.ToLower() == "Anfibio")
+                        if (respuesta.ToLower() == "c" || respuesta.ToLower() == "anfibio")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -122,7 +123,7 @@ namespace Quiz
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "b" || Respuesta.ToLower() == "Cerebro")
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "cerebro")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -144,7 +145,7 @@ namespace Quiz
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "b" || Respuesta.ToLower() == "Metamorfosis")
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "metamorfosis")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -152,7 +153,7 @@ namespace Quiz
                         else
                         {
                             // En caso de que no haya acertado se le informa al usuario
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Fotosintesis");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era metamorfosis");
                         }
                         break;
                     case (7):
@@ -166,7 +167,7 @@ namespace Quiz
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "b" || Respuesta.ToLower() == "Agua")
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "agua")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -188,7 +189,7 @@ namespace Quiz
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "a" || Respuesta.ToLower() == "Aves")
+                        if (respuesta.ToLower() == "a" || respuesta.ToLower() == "aves")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -210,7 +211,7 @@ namespace Quiz
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "b" || Respuesta.ToLower() == "Nutrientes del suelo y dioxido de carbono")
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "nutrientes del suelo y dioxido de carbono")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -232,7 +233,7 @@ namespace Quiz
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "c" || Respuesta.ToLower() == "Corazon")
+                        if (respuesta.ToLower() == "c" || respuesta.ToLower() == "corazon")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -244,6 +245,7 @@ namespace Quiz
                         }
                         break;
                     default:
+                        Console.WriteLine("Error en la evaluación de la respuesta.");
                         break;
                 }
                 // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
@@ -279,8 +281,8 @@ namespace Quiz
             {
                 Random pregunta = new Random(); // Instancia para generar números aleatorios
                 int preguntaAleatoria = pregunta.Next(preguntasIntermedias.Count); // Genera la pregunta aleatoria
-                                                                               // Accedemos al número de pregunta aleatoria mediante el índice generado
-                switch (preguntasIntermedias [preguntaAleatoria])
+                                                                                   // Accedemos al número de pregunta aleatoria mediante el índice generado
+                switch (preguntasIntermedias[preguntaAleatoria])
                 {
                     case (1):
                         Console.WriteLine("pregunta 1: ¿Cuál es el órgano encargado de filtrar la sangre en el cuerpo humano?");
@@ -293,7 +295,7 @@ namespace Quiz
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "b" || Respuesta.ToLower() == "Riñones")
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "riñones")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -316,7 +318,7 @@ namespace Quiz
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "c" || Respuesta.ToLower() == "Esofago")
+                        if (respuesta.ToLower() == "c" || respuesta.ToLower() == "esofago")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -338,7 +340,7 @@ namespace Quiz
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "a" || Respuesta.ToLower() == "Pancreas")
+                        if (respuesta.ToLower() == "a" || respuesta.ToLower() == "pancreas")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -360,7 +362,7 @@ namespace Quiz
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "b" || Respuesta.ToLower() == "Pulmones")
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "pulmones")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -382,8 +384,8 @@ namespace Quiz
                         Console.WriteLine();
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
-                                                        // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "b" || Respuesta.ToLower() == "Cerebelo")
+                                                        // Se evalúa si se dio una respuesta correcta o n
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "cerebelo"
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -405,7 +407,7 @@ namespace Quiz
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "b" || Respuesta.ToLower() == "Epidermis")
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "epidermis")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -426,8 +428,8 @@ namespace Quiz
                         Console.WriteLine();
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
-                                                        // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "a" || Respuesta.ToLower() == "Globulos rojos")
+                                                        // Se evalúa si se dio una respuesta correcta o 
+                        if (respuesta.ToLower() == "a" || respuesta.ToLower() == "globulos rojos
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -448,8 +450,8 @@ namespace Quiz
                         Console.WriteLine();
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
-                                                        // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "c" || Respuesta.ToLower() == "Vesicula biliar")
+                                                        // Se evalúa si se dio una respuesta correcta o n
+                        if (respuesta.ToLower() == "c" || respuesta.ToLower() == "vesicula biliar"
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -471,7 +473,7 @@ namespace Quiz
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "b" || Respuesta.ToLower() == "Absorber nutrientes")
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "absorber nutrientes")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -493,7 +495,7 @@ namespace Quiz
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "c" || Respuesta.ToLower() == "Medula osea")
+                        if (respuesta.ToLower() == "c" || respuesta.ToLower() == "medula osea")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -505,6 +507,7 @@ namespace Quiz
                         }
                         break;
                     default:
+                        Console.WriteLine("Error en la evaluación de la respuesta.");
                         break;
                 }
                 // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
