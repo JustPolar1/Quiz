@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Runtime;
 
 namespace Quiz
 {
@@ -14,14 +16,23 @@ namespace Quiz
             int respuesta; // Variable para guardar las respuestas del usuario
             int ronda = 1; // El número de rondas que llevamos
 
+            dynamic categoria; // Esta variable almacenará la categoría que actualmente se está jugando
+
             // Se definen los objetos de los jugadores fuera del bloque `if` para que sean accesibles en toda la función
             Concursante jugador1 = null;
             Concursante jugador2 = null;
 
-            // Se le da la opción al usuario de jugar en modo multijugador o solitario
+            // Objetos para cada quiz
+            Quiz culturaGeneral = new Quiz();
+            Acertijos acertijo = new Acertijos();
+            Ciencias ciencia = new Ciencias();
+            Historia historia = new Historia();
+            Matematicas matematicas = new Matematicas();
+
             Console.WriteLine("¡Bienvenido al juego de Quizzes interactivo!");
             do // Ciclo principal, donde todo el programa se ejecuta
             {
+                seguirCiclo = true;
                 if (ronda != 1)
                 {
                     Console.WriteLine("¡Buena ronda! ¿te gustaría cambiar el modo de juego? Escribe 1 si es el caso, sino solo presiona cualquier tecla");
@@ -53,6 +64,7 @@ namespace Quiz
                 {
                     try
                     {
+                        // Se le da la opción al usuario de jugar en modo multijugador o solitario
                         Console.WriteLine("¿En qué modo de juego te gustaría jugar?");
                         Console.WriteLine("\t1. Solitario");
                         Console.WriteLine("\t2. Multijugador");
@@ -115,25 +127,87 @@ namespace Quiz
                 }
                 if (multijugador && cambio)
                 {
-                    Console.WriteLine("¡Bienvenido, jugador 2! ¿Cuál es tu nombre?: ");
+                    Console.Write("¡Bienvenido, jugador 2! ¿Cuál es tu nombre?: ");
                     jugador2.Nombre = Console.ReadLine();
 
                     Console.WriteLine($"¡Buen nombre, {jugador2.Nombre}!\nPresiona cualquier tecla para continuar: ");
                     Console.ReadKey(true);
                 }
-
-                if (ronda == 1) // Solo se mostrará en la primera ronda
+                do // Ciclo de opciones para la elección de una categoría
+                {
+                    try
+                    {
+                        Console.Clear();
+                        Console.WriteLine("¿En qué categoría te gustaría jugar?");
+                        Console.WriteLine("\t1. Cultura General");
+                        Console.WriteLine("\t2. Acertijos");
+                        Console.WriteLine("\t3. Ciencias");
+                        Console.WriteLine("\t4. Historia");
+                        Console.WriteLine("\t5. Matemáticas");
+                        Console.Write("Escribe aquí el número de la opción que quieras: ");
+                        switch (int.Parse(Console.ReadLine()))
+                        {
+                            case 1:
+                                Console.Clear();
+                                categoria = culturaGeneral;
+                                Console.WriteLine("Elegiste cultura general, ¡veamos cuánto sabes realmente del mundo! :D");
+                                break;
+                            case 2:
+                                Console.Clear();
+                                categoria = acertijo;
+                                Console.WriteLine("Bienvenido al Quiz de las adivinanzas, donde tu desespero es nuestra alegria");
+                                break;
+                            case 3:
+                                Console.Clear();
+                                categoria = ciencia;
+                                Console.WriteLine("¿Entonces te gustan las ciencias? en ese caso ¡Bario Molibdeno y Sulfuro!");
+                                break;
+                            case 4:
+                                Console.Clear();
+                                categoria = historia;
+                                Console.WriteLine("¡Historia será!");
+                                break;
+                            case 5:
+                                Console.Clear();
+                                categoria = matematicas;
+                                Console.WriteLine("¡Elegiste Matemáticas! ¿Sabes por qué el quiz de matemáticas estaba triste? ¡Porque tenía muchos problemas! :D");
+                                break;
+                            default:
+                                Console.Clear();
+                                Console.WriteLine("Esa no es una opción, por favor escribe únicamente el NÚMERO de la opción que prefieres");
+                                break;
+                        };
+                        seguirCiclo = false;
+                    }
+                    catch (FormatException)
+                    {
+                        Console.WriteLine("Por favor, escribe únicamente números");
+                    }
+                    catch (OverflowException)
+                    {
+                        Console.WriteLine("Escribiste demasiados números");
+                    }
+                    finally
+                    {
+                        Console.WriteLine();
+                        Console.Write("Presiona cualquier tecla para continuar: ");
+                        Console.ReadKey(true);
+                        Console.Clear();
+                    }
+                } while (seguirCiclo);
+                if (ronda == 1) // Las instrucciones solo se mostrarán en la primera ronda
                 {
                     Console.Clear();
                     Console.WriteLine("Instrucciones:");
                     Console.WriteLine("A continuación se mostrarán rondas de 5 preguntas de la categoría seleccionada para cada jugador");
                     Console.WriteLine("La dificultad de cada pregunta será completamente aleatoria, y cada jugador recibirá la misma dificultad de preguntas");
-                    Console.WriteLine("Cada respuesta correcta se sumará 1 punto en el marcador");
+                    Console.WriteLine("Cada respuesta correcta sumará 1 punto en el marcador del jugador correspondiente");
                     Console.WriteLine("El jugador con el mayor puntuaje será declarado ganador de esta ronda!");
                     Console.WriteLine();
                     Console.WriteLine("¡Buena suerte!");
                     Console.ReadKey(true);
                 }
+
 
                 /* Lo que se implementará:
                  * A continuación seguiría implementar la jugabilidad, tengo pensado que hayan 3 variables

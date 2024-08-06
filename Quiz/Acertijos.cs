@@ -17,7 +17,6 @@ namespace Quiz
             // Si aún hay entonces se seguirán generando preguntas
             else
             {
-                Console.WriteLine("Hola, Bienvenido al Quiz de las adivinanzas, donde tu desespero es nuestra alegria");
                 Console.WriteLine("Bienvenido al final fácil, ¿listo?, comencemos ;)");
                 Random pregunta = new Random();
                 int preguntaAleatoria = pregunta.Next(preguntasBasicas.Count);
