@@ -27,8 +27,9 @@ namespace Quiz
         {
             1, 2, 3, 4, 5, 6, 7, 8, 9, 10
         };
+
         public string Respuesta { get => Respuesta; set => Respuesta = value; }
-        public bool RespuestaCorrecta { get => RespuestaCorrecta; set => RespuestaCorrecta = value; }
+        public bool RespuestaCorrecta { get => respuestaCorrecta; set => respuestaCorrecta = value; }
 
         // Cada método de cada categoría generará UNA pregunta aleatoria de esa categoría dependiendo la dificultad
         public virtual void Basico(Concursante concursante)
@@ -82,7 +83,7 @@ namespace Quiz
                         Respuesta = Console.ReadLine().ToLower();
                         if (Respuesta == "c" || Respuesta == "peru" || Respuesta == "perú")
                         {
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -141,12 +142,12 @@ namespace Quiz
                         Console.WriteLine();
 
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "a" || Respuesta.ToLower() == "Montevideo")
+                        if (respuesta.ToLower() == "a" || respuesta.ToLower() == "Montevideo")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -165,7 +166,7 @@ namespace Quiz
                         break;
                 }
                 // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
-                if (RespuestaCorrecta)
+                if (respuestaCorrecta)
                 {
                     Console.WriteLine("¡Respuesta correcta!");
                     Console.WriteLine($"¡{concursante.Nombre} Recibe un punto!");
@@ -183,7 +184,7 @@ namespace Quiz
             Console.ReadLine();
             Console.Clear();
             // Se devuelve a su estado original la variable de respuesta correcta
-            RespuestaCorrecta = false;
+            respuestaCorrecta = false;
         }
         public virtual void Avanzado(Concursante concursante) 
         {

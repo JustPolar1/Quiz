@@ -3,8 +3,28 @@ using System.Collections.Generic;
 
 namespace Quiz
 {
-    internal class Ciencias : Quiz
+    internal class Ciencias: Quiz
     {
+        // Variable que almacenará las respuestas del usuario
+        private string respuesta;
+        private bool respuestaCorrecta = false;
+
+        // Variable que almacenará el número de preguntas aleatorias
+        private List<int> preguntasBasicas = new List<int>()
+        {
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
+
+        private List<int> preguntasIntermedias = new List<int>()
+        {
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
+
+        private List<int> preguntasAvanzadas = new List<int>()
+        {
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
+
         // Cada método de cada categoría generará UNA pregunta aleatoria de esa categoría dependiendo la dificultad
         public override void Basico(Concursante concursante)
         {
@@ -30,13 +50,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-
-                        if (respuesta.ToLower() == "c" || respuesta.ToLower() == "raices")
+                        if (respuesta.ToLower() == "c" || respuesta.ToLower() == "Raices")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -54,12 +73,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "pulmones")
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "Pulmones")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -76,12 +95,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (respuesta.ToLower() == "a" || respuesta.ToLower() == "fotosintesis")
+                        if (respuesta.ToLower() == "a" || respuesta.ToLower() == "Fotosintesis")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -98,12 +117,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (respuesta.ToLower() == "c" || respuesta.ToLower() == "anfibio")
+                        if (respuesta.ToLower() == "c" || respuesta.ToLower() == "Anfibio")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -121,12 +140,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "cerebro")
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "Cerebro")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -143,17 +162,17 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "metamorfosis")
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "Metamorfosis")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
                             // En caso de que no haya acertado se le informa al usuario
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era metamorfosis");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Fotosintesis");
                         }
                         break;
                     case (7):
@@ -165,12 +184,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "agua")
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "Agua")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -187,12 +206,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (respuesta.ToLower() == "a" || respuesta.ToLower() == "aves")
+                        if (respuesta.ToLower() == "a" || respuesta.ToLower() == "Aves")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -209,12 +228,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "nutrientes del suelo y dioxido de carbono")
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "Nutrientes del suelo y dioxido de carbono")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -231,12 +250,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (respuesta.ToLower() == "c" || respuesta.ToLower() == "corazon")
+                        if (respuesta.ToLower() == "c" || respuesta.ToLower() == "Corazon")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -245,11 +264,10 @@ namespace Quiz
                         }
                         break;
                     default:
-                        Console.WriteLine("Error en la evaluación de la respuesta.");
                         break;
                 }
                 // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
-                if (RespuestaCorrecta)
+                if (respuestaCorrecta)
                 {
                     Console.WriteLine("¡Respuesta correcta!");
                     Console.WriteLine($"¡{concursante.Nombre} Recibe un punto!");
@@ -267,7 +285,7 @@ namespace Quiz
             Console.ReadLine();
             Console.Clear();
             // Se devuelve a su estado original la variable de respuesta correcta
-            RespuestaCorrecta = false;
+            respuestaCorrecta = false;
         }
         public virtual void Intermedio(Concursante concursante)
         {
@@ -281,8 +299,8 @@ namespace Quiz
             {
                 Random pregunta = new Random(); // Instancia para generar números aleatorios
                 int preguntaAleatoria = pregunta.Next(preguntasIntermedias.Count); // Genera la pregunta aleatoria
-                                                                                   // Accedemos al número de pregunta aleatoria mediante el índice generado
-                switch (preguntasIntermedias[preguntaAleatoria])
+                                                                               // Accedemos al número de pregunta aleatoria mediante el índice generado
+                switch (preguntasIntermedias [preguntaAleatoria])
                 {
                     case (1):
                         Console.WriteLine("pregunta 1: ¿Cuál es el órgano encargado de filtrar la sangre en el cuerpo humano?");
@@ -293,12 +311,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "riñones")
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "Riñones")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -316,12 +334,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (respuesta.ToLower() == "c" || respuesta.ToLower() == "esofago")
+                        if (respuesta.ToLower() == "c" || respuesta.ToLower() == "Esofago")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -338,12 +356,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (respuesta.ToLower() == "a" || respuesta.ToLower() == "pancreas")
+                        if (respuesta.ToLower() == "a" || respuesta.ToLower() == "Pancreas")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -360,12 +378,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "pulmones")
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "Pulmones")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -383,12 +401,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
-                                                        // Se evalúa si se dio una respuesta correcta o n
-                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "cerebelo"
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                                                        // Se evalúa si se dio una respuesta correcta o no
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "Cerebelo")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -405,12 +423,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "epidermis")
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "Epidermis")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -427,12 +445,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
-                                                        // Se evalúa si se dio una respuesta correcta o 
-                        if (respuesta.ToLower() == "a" || respuesta.ToLower() == "globulos rojos
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                                                        // Se evalúa si se dio una respuesta correcta o no
+                        if (respuesta.ToLower() == "a" || respuesta.ToLower() == "Globulos rojos")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -449,12 +467,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
-                                                        // Se evalúa si se dio una respuesta correcta o n
-                        if (respuesta.ToLower() == "c" || respuesta.ToLower() == "vesicula biliar"
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                                                        // Se evalúa si se dio una respuesta correcta o no
+                        if (respuesta.ToLower() == "c" || respuesta.ToLower() == "Vesicula biliar")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -471,12 +489,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "absorber nutrientes")
+                        if (respuesta.ToLower() == "b" || respuesta.ToLower() == "Absorber nutrientes")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -493,12 +511,12 @@ namespace Quiz
 
                         Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                                                         // Se evalúa si se dio una respuesta correcta o no
-                        if (respuesta.ToLower() == "c" || respuesta.ToLower() == "medula osea")
+                        if (respuesta.ToLower() == "c" || respuesta.ToLower() == "Medula osea")
                         {
                             // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
+                            respuestaCorrecta = true;
                         }
                         else
                         {
@@ -507,11 +525,10 @@ namespace Quiz
                         }
                         break;
                     default:
-                        Console.WriteLine("Error en la evaluación de la respuesta.");
                         break;
                 }
                 // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
-                if (RespuestaCorrecta)
+                if (respuestaCorrecta)
                 {
                     Console.WriteLine("¡Respuesta correcta!");
                     Console.WriteLine($"¡{concursante.Nombre} Recibe un punto!");
@@ -529,266 +546,269 @@ namespace Quiz
             Console.ReadLine();
             Console.Clear();
             // Se devuelve a su estado original la variable de respuesta correcta
-            RespuestaCorrecta = false;
+            respuestaCorrecta = false;
         }
+    }
         public virtual void Avanzado(Concursante concursante)
         {
-            // Primero se comprueba si quedan preguntas en esta categoría
-            if (preguntasAvanzadas.Count == 0)
+        // Primero se comprueba si quedan preguntas en esta categoría
+        if (preguntasAvanzadas.Count == 0)
+        {
+            Console.WriteLine("¡No hay más preguntas en esta categoría!");
+        }
+        // Si aún hay entonces se seguirán generando preguntas
+        else
+        {
+            Random pregunta = new Random(); // Instancia para generar números aleatorios
+            int preguntaAleatoria = pregunta.Next(preguntasAvanzadas.Count); // Genera la pregunta aleatoria
+                                                                               // Accedemos al número de pregunta aleatoria mediante el índice generado
+            switch (preguntasAvanzadas[preguntaAleatoria])
             {
-                Console.WriteLine("¡No hay más preguntas en esta categoría!");
+                case (1):
+                    Console.WriteLine("pregunta 1: ¿Cuál es el orgánulo responsable de la producción de energía en la célula?");
+                    Console.WriteLine("\ta) Nucleo");
+                    Console.WriteLine("\tb) Mitocondria");
+                    Console.WriteLine("\tc) Lisomas");
+                    Console.Write("Escribe tu respuesta: ");
+
+                    Console.WriteLine();
+
+                    respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                                                    // Se evalúa si se dio una respuesta correcta o no
+                    if (respuesta.ToLower() == "b" || respuesta.ToLower() == "Mitocondria")
+                    {
+                        // Se activa la variable que determina si se ganó la ronda
+                        respuestaCorrecta = true;
+                    }
+                    else
+                    {
+                        // En caso de que no haya acertado se le informa al usuario
+                        Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Mitocondria");
+                    }
+                    break;
+                // Las demás preguntas deberán tener un formato similar
+                case (2):
+                    Console.WriteLine("pregunta 2: ¿Cómo se llama el proceso de división celular que resulta en células hijas idénticas?");
+                    Console.WriteLine("\ta) Simbiosis");
+                    Console.WriteLine("\tb) Interfase");
+                    Console.WriteLine("\tc) Mitosis");
+                    Console.Write("Escribe tu respuesta: ");
+
+                    Console.WriteLine();
+
+                    respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                                                    // Se evalúa si se dio una respuesta correcta o no
+                    if (respuesta.ToLower() == "c" || respuesta.ToLower() == "Mitosis")
+                    {
+                        // Se activa la variable que determina si se ganó la ronda
+                        respuestaCorrecta = true;
+                    }
+                    else
+                    {
+                        // En caso de que no haya acertado se le informa al usuario
+                        Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Mitosis");
+                    }
+                    break;
+                case (3):
+                    Console.WriteLine("pregunta 3: ¿Qué elemento químico tiene el símbolo Fe?");
+                    Console.WriteLine("\ta) Hierro");
+                    Console.WriteLine("\tb) Cobre");
+                    Console.WriteLine("\tc) Plata");
+                    Console.Write("Escribe tu respuesta: ");
+
+                    Console.WriteLine();
+
+                    respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                                                    // Se evalúa si se dio una respuesta correcta o no
+                    if (respuesta.ToLower() == "a" || respuesta.ToLower() == "Hierro")
+                    {
+                        // Se activa la variable que determina si se ganó la ronda
+                        respuestaCorrecta = true;
+                    }
+                    else
+                    {
+                        // En caso de que no haya acertado se le informa al usuario
+                        Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Hierro");
+                    }
+                    break;
+                case (4):
+                    Console.WriteLine("pregunta 4:  ¿Cuál es la fórmula química del agua?");
+                    Console.WriteLine("\ta) Ca");
+                    Console.WriteLine("\tb) H20");
+                    Console.WriteLine("\tc) Na");
+                    Console.Write("Escribe tu respuesta: ");
+
+                    Console.WriteLine();
+
+                    respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                                                    // Se evalúa si se dio una respuesta correcta o no
+                    if (respuesta.ToLower() == "b" || respuesta.ToLower() == "H20")
+                    {
+                        // Se activa la variable que determina si se ganó la ronda
+                        respuestaCorrecta = true;
+                    }
+                    else
+                    {
+                        // En caso de que no haya acertado se le informa al usuario
+                        Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era H20");
+                    }
+
+                    break;
+                case (5):
+                    Console.WriteLine("pregunta 5: ¿Qué orgánulo celular contiene el material genético en las células eucariotas?");
+                    Console.WriteLine("\ta) Mitocondria");
+                    Console.WriteLine("\tb) Nucleo");
+                    Console.WriteLine("\tc) Aparato de Golgi");
+                    Console.Write("Escribe tu respuesta: ");
+
+                    Console.WriteLine();
+
+                    respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                                                    // Se evalúa si se dio una respuesta correcta o no
+                    if (respuesta.ToLower() == "b" || respuesta.ToLower() == "Nucleo")
+                    {
+                        // Se activa la variable que determina si se ganó la ronda
+                        respuestaCorrecta = true;
+                    }
+                    else
+                    {
+                        // En caso de que no haya acertado se le informa al usuario
+                        Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Nucleo");
+                    }
+                    break;
+                case (6):
+                    Console.WriteLine("pregunta 6: ¿Qué enlace químico se forma entre dos átomos que comparten electrones?");
+                    Console.WriteLine("\ta) Enlace equivalente");
+                    Console.WriteLine("\tb) Enlace covalente");
+                    Console.WriteLine("\tc) Enlace metalico");
+                    Console.Write("Escribe tu respuesta: ");
+
+                    Console.WriteLine();
+
+                    respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                                                    // Se evalúa si se dio una respuesta correcta o no
+                    if (respuesta.ToLower() == "b" || respuesta.ToLower() == "Enlace covalente")
+                    {
+                        // Se activa la variable que determina si se ganó la ronda
+                        respuestaCorrecta = true;
+                    }
+                    else
+                    {
+                        // En caso de que no haya acertado se le informa al usuario
+                        Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Enlace covalente");
+                    }
+                    break;
+                case (7):
+                    Console.WriteLine("pregunta 7: ¿Cuál es el pH de una solución neutra?");
+                    Console.WriteLine("\ta) 7");
+                    Console.WriteLine("\tb) 14");
+                    Console.WriteLine("\tc) 0");
+                    Console.Write("Escribe tu respuesta: ");
+
+                    Console.WriteLine();
+
+                    respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                                                    // Se evalúa si se dio una respuesta correcta o no
+                    if (respuesta.ToLower() == "a" || respuesta.ToLower() == "7")
+                    {
+                        // Se activa la variable que determina si se ganó la ronda
+                        respuestaCorrecta = true;
+                    }
+                    else
+                    {
+                        // En caso de que no haya acertado se le informa al usuario
+                        Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 7");
+                    }
+                    break;
+                case (8):
+                    Console.WriteLine("pregunta 8:   ¿Qué tipo de molécula es el ATP?");
+                    Console.WriteLine("\ta) Acido sulfurico");
+                    Console.WriteLine("\tb) Ozono");
+                    Console.WriteLine("\tc) Adenosin trisfosfato");
+                    Console.Write("Escribe tu respuesta: ");
+
+                    Console.WriteLine();
+
+                    respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                                                    // Se evalúa si se dio una respuesta correcta o no
+                    if (respuesta.ToLower() == "c" || respuesta.ToLower() == "Adenosin trifosfato")
+                    {
+                        // Se activa la variable que determina si se ganó la ronda
+                        respuestaCorrecta = true;
+                    }
+                    else
+                    {
+                        // En caso de que no haya acertado se le informa al usuario
+                        Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Adenosin trifosfato");
+                    }
+                    break;
+                case (9):
+                    Console.WriteLine("pregunta 9: ¿Qué proceso celular convierte el ADN en ARN?");
+                    Console.WriteLine("\ta) Osmosis");
+                    Console.WriteLine("\tb) Transcripcion");
+                    Console.WriteLine("\tc) Mitosis");
+                    Console.Write("Escribe tu respuesta: ");
+
+                    Console.WriteLine();
+
+                    respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                                                    // Se evalúa si se dio una respuesta correcta o no
+                    if (respuesta.ToLower() == "b" || respuesta.ToLower() == "Transcripcion")
+                    {
+                        // Se activa la variable que determina si se ganó la ronda
+                        respuestaCorrecta = true;
+                    }
+                    else
+                    {
+                        // En caso de que no haya acertado se le informa al usuario
+                        Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Transcripcion");
+                    }
+                    break;
+                case (10):
+                    Console.WriteLine("pregunta 10:  ¿Qué partícula subatómica tiene carga negativa?");
+                    Console.WriteLine("\ta) Proton");
+                    Console.WriteLine("\tb) Neutron");
+                    Console.WriteLine("\tc) Electron");
+                    Console.Write("Escribe tu respuesta: ");
+
+                    Console.WriteLine();
+
+                    respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                                                    // Se evalúa si se dio una respuesta correcta o no
+                    if (respuesta.ToLower() == "c" || respuesta.ToLower() == "Electron")
+                    {
+                        // Se activa la variable que determina si se ganó la ronda
+                        respuestaCorrecta = true;
+                    }
+                    else
+                    {
+                        // En caso de que no haya acertado se le informa al usuario
+                        Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Electron");
+                    }
+                    break;
+                default:
+                    break;
             }
-            // Si aún hay entonces se seguirán generando preguntas
-            else
+            // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
+            if (respuestaCorrecta)
             {
-                Random pregunta = new Random(); // Instancia para generar números aleatorios
-                int preguntaAleatoria = pregunta.Next(preguntasAvanzadas.Count); // Genera la pregunta aleatoria
-                                                                                   // Accedemos al número de pregunta aleatoria mediante el índice generado
-                switch (preguntasAvanzadas[preguntaAleatoria])
-                {
-                    case (1):
-                        Console.WriteLine("pregunta 1: ¿Cuál es el orgánulo responsable de la producción de energía en la célula?");
-                        Console.WriteLine("\ta) Nucleo");
-                        Console.WriteLine("\tb) Mitocondria");
-                        Console.WriteLine("\tc) Lisomas");
-                        Console.Write("Escribe tu respuesta: ");
+                Console.WriteLine("¡Respuesta correcta!");
+                Console.WriteLine($"¡{concursante.Nombre} Recibe un punto!");
+                concursante.Puntos += 1;
+            }
+            // Se elimina el número de la pregunta anteriormente dada para evitar repetidos
+            preguntasBasicas.RemoveAt(preguntaAleatoria);
+        }
 
-                        Console.WriteLine();
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
-                                                        // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "b" || Respuesta.ToLower() == "Mitocondria")
-                        {
-                            // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
-                            // En caso de que no haya acertado se le informa al usuario
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Mitocondria");
-                        }
-                        break;
-                    // Las demás preguntas deberán tener un formato similar
-                    case (2):
-                        Console.WriteLine("pregunta 2: ¿Cómo se llama el proceso de división celular que resulta en células hijas idénticas?");
-                        Console.WriteLine("\ta) Simbiosis");
-                        Console.WriteLine("\tb) Interfase");
-                        Console.WriteLine("\tc) Mitosis");
-                        Console.Write("Escribe tu respuesta: ");
+            // Protocolo de finalización de la fase, agregar siempre.
+            Console.WriteLine();
 
-                        Console.WriteLine();
-
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
-                                                        // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "c" || Respuesta.ToLower() == "Mitosis")
-                        {
-                            // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
-                            // En caso de que no haya acertado se le informa al usuario
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Mitosis");
-                        }
-                        break;
-                    case (3):
-                        Console.WriteLine("pregunta 3: ¿Qué elemento químico tiene el símbolo Fe?");
-                        Console.WriteLine("\ta) Hierro");
-                        Console.WriteLine("\tb) Cobre");
-                        Console.WriteLine("\tc) Plata");
-                        Console.Write("Escribe tu respuesta: ");
-
-                        Console.WriteLine();
-
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
-                                                        // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "a" || Respuesta.ToLower() == "Hierro")
-                        {
-                            // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
-                            // En caso de que no haya acertado se le informa al usuario
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Hierro");
-                        }
-                        break;
-                    case (4):
-                        Console.WriteLine("pregunta 4:  ¿Cuál es la fórmula química del agua?");
-                        Console.WriteLine("\ta) Ca");
-                        Console.WriteLine("\tb) H20");
-                        Console.WriteLine("\tc) Na");
-                        Console.Write("Escribe tu respuesta: ");
-
-                        Console.WriteLine();
-
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
-                                                        // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "b" || Respuesta.ToLower() == "H20")
-                        {
-                            // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
-                            // En caso de que no haya acertado se le informa al usuario
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era H20");
-                        }
-
-                        break;
-                    case (5):
-                        Console.WriteLine("pregunta 5: ¿Qué orgánulo celular contiene el material genético en las células eucariotas?");
-                        Console.WriteLine("\ta) Mitocondria");
-                        Console.WriteLine("\tb) Nucleo");
-                        Console.WriteLine("\tc) Aparato de Golgi");
-                        Console.Write("Escribe tu respuesta: ");
-
-                        Console.WriteLine();
-
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
-                                                        // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "b" || Respuesta.ToLower() == "Nucleo")
-                        {
-                            // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
-                            // En caso de que no haya acertado se le informa al usuario
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Nucleo");
-                        }
-                        break;
-                    case (6):
-                        Console.WriteLine("pregunta 6: ¿Qué enlace químico se forma entre dos átomos que comparten electrones?");
-                        Console.WriteLine("\ta) Enlace equivalente");
-                        Console.WriteLine("\tb) Enlace covalente");
-                        Console.WriteLine("\tc) Enlace metalico");
-                        Console.Write("Escribe tu respuesta: ");
-
-                        Console.WriteLine();
-
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
-                                                        // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "b" || Respuesta.ToLower() == "Enlace covalente")
-                        {
-                            // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
-                            // En caso de que no haya acertado se le informa al usuario
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Enlace covalente");
-                        }
-                        break;
-                    case (7):
-                        Console.WriteLine("pregunta 7: ¿Cuál es el pH de una solución neutra?");
-                        Console.WriteLine("\ta) 7");
-                        Console.WriteLine("\tb) 14");
-                        Console.WriteLine("\tc) 0");
-                        Console.Write("Escribe tu respuesta: ");
-
-                        Console.WriteLine();
-
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
-                                                        // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "a" || Respuesta.ToLower() == "7")
-                        {
-                            // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
-                            // En caso de que no haya acertado se le informa al usuario
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 7");
-                        }
-                        break;
-                    case (8):
-                        Console.WriteLine("pregunta 8:   ¿Qué tipo de molécula es el ATP?");
-                        Console.WriteLine("\ta) Acido sulfurico");
-                        Console.WriteLine("\tb) Ozono");
-                        Console.WriteLine("\tc) Adenosin trisfosfato");
-                        Console.Write("Escribe tu respuesta: ");
-
-                        Console.WriteLine();
-
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
-                                                        // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "c" || Respuesta.ToLower() == "Adenosin trifosfato")
-                        {
-                            // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
-                            // En caso de que no haya acertado se le informa al usuario
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Adenosin trifosfato");
-                        }
-                        break;
-                    case (9):
-                        Console.WriteLine("pregunta 9: ¿Qué proceso celular convierte el ADN en ARN?");
-                        Console.WriteLine("\ta) Osmosis");
-                        Console.WriteLine("\tb) Transcripcion");
-                        Console.WriteLine("\tc) Mitosis");
-                        Console.Write("Escribe tu respuesta: ");
-
-                        Console.WriteLine();
-
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
-                                                        // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "b" || Respuesta.ToLower() == "Transcripcion")
-                        {
-                            // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
-                            // En caso de que no haya acertado se le informa al usuario
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Transcripcion");
-                        }
-                        break;
-                    case (10):
-                        Console.WriteLine("pregunta 10:  ¿Qué partícula subatómica tiene carga negativa?");
-                        Console.WriteLine("\ta) Proton");
-                        Console.WriteLine("\tb) Neutron");
-                        Console.WriteLine("\tc) Electron");
-                        Console.Write("Escribe tu respuesta: ");
-
-                        Console.WriteLine();
-
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
-                                                        // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "c" || Respuesta.ToLower() == "Electron")
-                        {
-                            // Se activa la variable que determina si se ganó la ronda
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
-                            // En caso de que no haya acertado se le informa al usuario
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Electron");
-                        }
-                        break;
-                    default:
-                        break;
-                }
-                // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
-                if (RespuestaCorrecta)
-                {
-                    Console.WriteLine("¡Respuesta correcta!");
-                    Console.WriteLine($"¡{concursante.Nombre} Recibe un punto!");
-                    concursante.Puntos += 1;
-                }
-                // Se elimina el número de la pregunta anteriormente dada para evitar repetidos
-                preguntasBasicas.RemoveAt(preguntaAleatoria);
-
-                // Protocolo de finalización de la fase, agregar siempre.
-                Console.WriteLine();
-
-                Console.Write("Enter para continuar ");
-                Console.ReadLine();
-                Console.Clear();
-                // Se devuelve a su estado original la variable de respuesta correcta
-                RespuestaCorrecta = false;
+            Console.Write("Enter para continuar ");
+            Console.ReadLine();
+            Console.Clear();
+            // Se devuelve a su estado original la variable de respuesta correcta
+            respuestaCorrecta = false;
             }
         }
     }

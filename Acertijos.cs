@@ -308,12 +308,12 @@ namespace Quiz
                         break;
                     case (4):
                         Console.WriteLine("Tengo cien hermanos, todos calvos, ninguna usa sombrero y todos usan zapatos. " +
-                        "¿Qué soy?");
+                            "¿Qué soy?");
                         Console.Write("Escribe tu respuesta: ");
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "el peine" || Respuesta == "un peine")
+                        if (Respuesta == "El peine" || Respuesta == "un peine")
                         {
                             RespuestaCorrecta = true;
                         }
@@ -415,6 +415,9 @@ namespace Quiz
                             Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: !EL ESPEJO¡ :D ");
                         }
                         break;
+
+
+
                     default:
                         break;
                 }
