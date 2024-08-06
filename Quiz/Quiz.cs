@@ -157,7 +157,6 @@ namespace Quiz
             // Se devuelve a su estado original la variable de respuesta correcta
             respuestaCorrecta = false;
         }
-    }
         public virtual void Avanzado(Concursante concursante) 
         {
             
