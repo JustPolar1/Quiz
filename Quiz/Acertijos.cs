@@ -8,6 +8,18 @@ namespace Quiz
 {
     internal class Acertijos : Quiz
     {
+        protected List<int> preguntasBasicas = new List<int>()
+        {
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
+        protected List<int> preguntasIntermedias = new List<int>()
+        {
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
+        protected List<int> preguntasAvanzadas = new List<int>()
+        {
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
         public override void Basico(Concursante concursante)
         {
             if (preguntasBasicas.Count == 0)
@@ -17,7 +29,6 @@ namespace Quiz
             // Si aún hay entonces se seguirán generando preguntas
             else
             {
-                Console.WriteLine("Hola, Bienvenido al Quiz de las adivinanzas, donde tu desespero es nuestra alegría");
                 Console.WriteLine("Bienvenido al final fácil, ¿listo?, comencemos ;)");
                 Random pregunta = new Random();
                 int preguntaAleatoria = pregunta.Next(preguntasBasicas.Count);
@@ -263,6 +274,7 @@ namespace Quiz
             {
                 Random pregunta = new Random(); // Instancia para generar números aleatorios
                 int preguntaAleatoria = pregunta.Next(preguntasIntermedias.Count); // Genera la pregunta aleatoria
+                Console.WriteLine("¡Pregunta intermedia!");
                 // Accedemos al número de pregunta aleatoria mediante el índice generado
                 switch (preguntasIntermedias[preguntaAleatoria])
                 {
