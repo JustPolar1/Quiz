@@ -8,6 +8,18 @@ namespace Quiz
 {
     internal class Acertijos : Quiz
     {
+        protected List<int> preguntasBasicas = new List<int>()
+        {
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
+        protected List<int> preguntasIntermedias = new List<int>()
+        {
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
+        protected List<int> preguntasAvanzadas = new List<int>()
+        {
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
         public override void Basico(Concursante concursante)
         {
             if (preguntasBasicas.Count == 0)
@@ -89,7 +101,7 @@ namespace Quiz
                             Console.WriteLine();
 
                             Respuesta = Console.ReadLine();
-                            if (Respuesta.ToLower() == "el hipopótamo" || Respuesta.ToLower() == "un hipopótamo")
+                            if (Respuesta.ToLower() == "el hipopotamo" || Respuesta.ToLower() == "un hipopotamo" || Respuesta.ToLower() == "hipopotamo")
                             {
 
                                 RespuestaCorrecta = true;
@@ -453,7 +465,7 @@ namespace Quiz
         public override void Avanzado(Concursante concursante)
         {
             // Primero se comprueba si quedan preguntas en esta categoría
-            if (preguntasBasicas.Count == 0)
+            if (preguntasAvanzadas.Count == 0)
             {
                 Console.WriteLine("¡No hay más preguntas en esta categoría!");
             }
@@ -461,7 +473,7 @@ namespace Quiz
             else
             {
                 Random pregunta = new Random(); // Instancia para generar números aleatorios
-                int preguntaAleatoria = pregunta.Next(preguntasBasicas.Count); // Genera la pregunta aleatoria
+                int preguntaAleatoria = pregunta.Next(preguntasAvanzadas.Count); // Genera la pregunta aleatoria
                 // Accedemos al número de pregunta aleatoria mediante el índice generado
                 switch (preguntasAvanzadas[preguntaAleatoria])
                 {

@@ -8,6 +8,18 @@ namespace Quiz
 {
     internal class Historia : Quiz
     {
+        protected List<int> preguntasBasicas = new List<int>()
+        {
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
+        protected List<int> preguntasIntermedias = new List<int>()
+        {
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
+        protected List<int> preguntasAvanzadas = new List<int>()
+        {
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
         public override void Basico(Concursante concursante)
         {
             if (preguntasBasicas.Count == 0)
@@ -78,6 +90,8 @@ namespace Quiz
                         }
                         break;
                     default:
+                        Console.WriteLine("Hubo un error inesperado");
+                        Console.ReadKey();
                         break;
                     case (4):
                         Console.WriteLine("¿En qué fecha empezó la Revolución Mexicana?");
@@ -277,7 +291,7 @@ namespace Quiz
                     case (2):
                         Console.WriteLine("¿Quien pronuncio la frase 'Maldito sea el soldado que vuelva las armas contra su pueblo'?");
                         Console.WriteLine("\ta) José de San Martin");
-                        Console.WriteLine("\tb) Simón Bolovar");
+                        Console.WriteLine("\tb) Simón Bolivar");
                         Console.WriteLine("\tc) Hugo Chávez");
                         Console.WriteLine("\td) Antonio José de Sucre");
                         Console.Write("Escribe tu respuesta: ");
@@ -446,6 +460,8 @@ namespace Quiz
                         }
                         break;
                     default:
+                        Console.WriteLine("Ocurrió un error inesperado");
+                        Console.ReadKey();
                         break;
                 }
                 // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
@@ -478,7 +494,7 @@ namespace Quiz
             else
             {
                 Random pregunta = new Random(); // Instancia para generar números aleatorios
-                int preguntaAleatoria = pregunta.Next(preguntasBasicas.Count); // Genera la pregunta aleatoria
+                int preguntaAleatoria = pregunta.Next(preguntasAvanzadas.Count); // Genera la pregunta aleatoria
 
                 Console.WriteLine("¡Pregunta avanzada!");
                 // Accedemos al número de pregunta aleatoria mediante el índice generado
@@ -509,7 +525,7 @@ namespace Quiz
                     // Las demás preguntas deberán tener un formato similar
                     case (2):
                         Console.WriteLine("¿Cuál fue el nombre del plan alemán para invadir Francia a través de" + 
-                            "Bélgica durante la Primera Guerra Mundial?");
+                            " Bélgica durante la Primera Guerra Mundial?");
                         Console.WriteLine("\ta) Plan Schlieffen");
                         Console.WriteLine("\tb) Operación Barbarroja");
                         Console.WriteLine("\tc) Plan Dawes");
@@ -519,7 +535,7 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "a" || Respuesta == " plan schlieffen")
+                        if (Respuesta == "a" || Respuesta == "plan schlieffen")
                         {
                             RespuestaCorrecta = true;
                         }
@@ -619,7 +635,7 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "c " || Respuesta == "1917")
+                        if (Respuesta == "c" || Respuesta == "1917")
                         {
                             RespuestaCorrecta = true;
                         }
@@ -691,6 +707,8 @@ namespace Quiz
                         }
                         break;
                     default:
+                        Console.WriteLine("Ocurrió un error inesperado");
+                        Console.ReadKey();
                         break;
                 }
                 // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante

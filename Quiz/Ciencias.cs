@@ -5,6 +5,18 @@ namespace Quiz
 {
     internal class Ciencias : Quiz
     {
+        protected List<int> preguntasBasicas = new List<int>()
+        {
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
+        protected List<int> preguntasIntermedias = new List<int>()
+        {
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
+        protected List<int> preguntasAvanzadas = new List<int>()
+        {
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        };
         // Cada método de cada categoría generará UNA pregunta aleatoria de esa categoría dependiendo la dificultad
         public override void Basico(Concursante concursante)
         {
@@ -281,7 +293,7 @@ namespace Quiz
             else
             {
                 Random pregunta = new Random(); // Instancia para generar números aleatorios
-                int preguntaAleatoria = pregunta.Next(preguntasIntermedias.Count); // Genera la pregunta aleatoria
+                int preguntaAleatoria = pregunta.Next(0, preguntasIntermedias.Count); // Genera la pregunta aleatoria
                 Console.WriteLine("¡Pregunta intermedia!");
                 // Accedemos al número de pregunta aleatoria mediante el índice generado
                 switch (preguntasIntermedias [preguntaAleatoria])
@@ -510,6 +522,7 @@ namespace Quiz
                         break;
                     default:
                         Console.WriteLine("Error en la evaluación de la respuesta.");
+                        Console.ReadKey();
                         break;
                 }
                 // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
@@ -772,6 +785,8 @@ namespace Quiz
                         }
                         break;
                     default:
+                        Console.WriteLine("Error en la evaluación de la respuesta.");
+                        Console.ReadKey();
                         break;
                 }
                 // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
