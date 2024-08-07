@@ -13,6 +13,7 @@ namespace Quiz
     internal class Matematicas : Quiz
     {
         // Cada método de cada categoría generará UNA pregunta aleatoria de esa categoría dependiendo la dificultad
+        private float RespuestaMath;
         public override void Basico(Concursante concursante)
         {
             // hola prueba
@@ -33,17 +34,14 @@ namespace Quiz
                 switch (preguntasBasicas[preguntaAleatoria])
                 {
                     case (1):
-                        Console.WriteLine("¿Cuál es la capital de Uruguay?");
-                        Console.WriteLine("\ta) Montevideo");
-                        Console.WriteLine("\tb) Uruguay");
-                        Console.WriteLine("\tc) Buenos Aires");
+                        Console.WriteLine("¿Cuantos lados tiene un hexagono?");
                         Console.Write("Escribe tu respuesta: ");
 
-                        Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
+                        RespuestaMath = float.Parse(Console.ReadLine()); // se lee la respuesta del usuario
 
                         Console.WriteLine();
                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "a" || Respuesta.ToLower() == "Montevideo")
+                        if (RespuestaMath == 6)
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -51,60 +49,46 @@ namespace Quiz
                         else
                         {
                             // En caso de que no haya acertado se le informa al usuario
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Montevideo");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era !6");
                         }
                         break;
                     // Las demás preguntas deberán tener un formato similar
                     case (2):
-                        Console.WriteLine("¿En qué país está el famosos Machu Pichu?");
-                        Console.WriteLine("\ta) Chile");
-                        Console.WriteLine("\tb) Estados Unidos");
-                        Console.WriteLine("\tc) Perú");
-                        Console.WriteLine("\td) México");
+                        Console.WriteLine("¿Cauntos lados tiene un pentagono?");
+                        Console.Write("Escribe tu respuesta: ");
 
-                        Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "c" || Respuesta == "peru" || Respuesta == "perú")
+                        RespuestaMath = float.Parse(Console.ReadLine());
+                        if (RespuestaMath == 5)
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: Perú");
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: 5");
                         }
                         break;
                     case (3):
-                        Console.WriteLine("");
-                        break;
-                    case (5):
-                        Console.WriteLine("¿Cuál es el océano más grande del mundo?");
-                        Console.WriteLine("\ta) Atlántico");
-                        Console.WriteLine("\tb) Pacífico");
-                        Console.WriteLine("\tc) Subacuático");
-                        Console.WriteLine("\td) Índico");
+                        Console.WriteLine("Juan compro 2 cajas de lapices por 100 pesos, si caja caja tiene " +
+                            "10 lapices. ¿Cuanto cuesta cada una lapiz?");
                         Console.Write("Escribe tu respuesta: ");
 
-
-                        Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "b" || Respuesta == "pacifico" || Respuesta == "pacífico")
+                        RespuestaMath = float.Parse(Console.ReadLine());
+                        if (RespuestaMath == 5)
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era b) Pacífico");
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era:" + 5);
                         }
                         break;
                     case (4):
-                        Console.WriteLine("¿Cuál es el país más grande del mundo?");
-                        Console.WriteLine("\ta) Rusia");
-                        Console.WriteLine("\tb) China");
-                        Console.WriteLine("\tc) Estados Unidos");
-                        Console.WriteLine("\td) Chile");
+                        Console.WriteLine("¿Cómo se le llama el triangulo que tiene sus tres lados iguales?");
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "a" || Respuesta == "rusia")
+                        RespuestaMath = float.Parse(Console.ReadLine());
+                        if (Respuesta == "triangulo equilatero")
                         {
                             RespuestaCorrecta = true;
                         }
@@ -113,93 +97,96 @@ namespace Quiz
                             Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era b) Pacífico");
                         }
                         break;
-                    case (6):
-                        Console.WriteLine("¿A qué se denomina séptimo arte?");
-                        Console.WriteLine("\ta) Pintura");
-                        Console.WriteLine("\tb) Escultura");
-                        Console.WriteLine("\tc) Diseño digital");
-                        Console.WriteLine("\td) Cine");
+                    case (5):
+                        Console.WriteLine("¿Cuantos vertices tiene un cubo?");
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "d" || Respuesta == "cine")
+                        RespuestaMath = float.Parse(Console.ReadLine());
+                        if (RespuestaMath == 8)
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era d) Cine");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 8");
+                        }
+                        break;
+                    case (6):
+                        Console.WriteLine("Si Lucas mide 1.80 metro de altura y Andrea mide 0.30 metros mas baja que" +
+                            "el ¿Cuanto mide Andrea?");
+                        Console.Write("Escribe tu respuesta: ");
+
+
+                        RespuestaMath = float.Parse(Console.ReadLine());
+                        if (RespuestaMath == 1.50)
+                        {
+                            RespuestaCorrecta = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 1.50");
                         }
                         break;
                     case (7):
-                        Console.WriteLine("¿Qué es un melómano?");
-                        Console.WriteLine("\ta) Amante del arte");
-                        Console.WriteLine("\tb) Amante del sexo");
-                        Console.WriteLine("\tc) Amante de la música");
-                        Console.WriteLine("\td) Amante de la comida");
+                        Console.WriteLine("Maria quiere comprar galletas para regalar en su cumpleaños, si compra 5" +
+                            "paquetes y cada paquete trae 6 galletas ¿Cuantas galletas compro en total?");
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "c" || Respuesta == "musica" || Respuesta == "amante de la musica" || Respuesta == "música" || Respuesta == "amante de la música")
+                        RespuestaMath = float.Parse(Console.ReadLine());
+                        if (RespuestaMath == 30)
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era c) Amante de la música");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 30");
                         }
                         break;
                     case (8):
-                        Console.WriteLine("¿Quién pintó la noche estrellada?");
-                        Console.WriteLine("\ta) Vicente Van Gogh");
-                        Console.WriteLine("\tb) Rembrandt");
-                        Console.WriteLine("\tc) Velazquez");
+                        Console.WriteLine("¿Cauntos metros tiene un kilometro?");
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "a" || Respuesta == "vicente van gogh" || Respuesta == "van gogh")
+                        RespuestaMath = float.Parse(Console.ReadLine());
+                        if (RespuestaMath == 1000)
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era a) Vicente Van Gogh");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 1000");
                         }
                         break;
                     case (9):
-                        Console.WriteLine("¿Quién es denominado el rey del rock en USA?");
-                        Console.WriteLine("\ta) Elvis Presley");
-                        Console.WriteLine("\tb) Michael Jackson");
-                        Console.WriteLine("\tc) The Rolling Stones");
+                        Console.WriteLine("¿Cuanto es 3 centenas?");
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "a" || Respuesta == "elvis presley" || Respuesta == "elvis")
+                        RespuestaMath = float.Parse(Console.ReadLine());
+                        if (RespuestaMath == 300)
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era a) Elvis Presley");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 300");
                         }
                         break;
                     case (10):
-                        Console.WriteLine("¿Las medusas tienen corazón?");
-                        Console.Write("Escribe tu respuesta (Sí o no): ");
+                        Console.WriteLine("¿Cuanto es una docena?");
+                        Console.Write("Escribe tu respuesta:");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "no" || Respuesta == "0")
+                        RespuestaMath = float.Parse(Console.ReadLine());
+                        if (RespuestaMath == 12)
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! las medusas no poseen un corazón");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta es 12");
                         }
                         break;
                     default:
@@ -243,17 +230,13 @@ namespace Quiz
                 switch (preguntasIntermedias[preguntaAleatoria])
                 {
                     case (1):
-                        Console.WriteLine("¿Cuántos municipios tiene Chihuahua?");
-                        Console.WriteLine("\ta) 52");
-                        Console.WriteLine("\tb) 83");
-                        Console.WriteLine("\tc) 67");
-                        Console.WriteLine("\tc) 32");
+                        Console.WriteLine("¿Cuál es el valor de x dada la siguiente ecuacion?: 10 + x = 15");
                         Console.Write("Escribe tu respuesta: ");
 
-                        Respuesta = Console.ReadLine().ToLower(); // se lee la respuesta del usuario
+                        RespuestaMath = float.Parse(Console.ReadLine()); // se lee la respuesta del usuario
                         Console.WriteLine();
                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta == "c" || Respuesta == "67")
+                        if (RespuestaMath == 5)
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -261,38 +244,30 @@ namespace Quiz
                         else
                         {
                             // En caso de que no haya acertado se le informa al usuario
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era c) 67 municipios");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 5");
                         }
                         break;
                     // Las demás preguntas deberán tener un formato similar
                     case (2): // Esta se deja
-                        Console.WriteLine("¿Cuántos kilómetros se recorren en una maratón?");
-                        Console.WriteLine("\ta) 20");
-                        Console.WriteLine("\tb) 30");
-                        Console.WriteLine("\tc) 42");
+                        Console.WriteLine("¿Cual es el valor de x dada la siguiente ecuacion: x^2 = 9?");
                         Console.Write("Escribe tu respuesta: ");
 
-
-                        Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "c" || Respuesta == "42")
+                        RespuestaMath = float.Parse(Console.ReadLine());
+                        if (RespuestaMath == 3)
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era c) 42");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 3");
                         }
                         break;
                     case (3):
                         Console.WriteLine("¿Cuáles son los cuatro lóbulos en los que se divide el cerebro?");
-                        Console.WriteLine("\ta) Emocional, intuitivo, percepción y pensador");
-                        Console.WriteLine("\tb) Creativo, pensante, perceptivo e intuitivo");
-                        Console.WriteLine("\tc) Cerebelo, Espina, médula e hipotalamo");
-                        Console.WriteLine("\td) Frontal, temporal, parietal y occipital");
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
+                        RespuestaMath = float.Parse(Console.ReadLine());
                         if (Respuesta == "d" || Respuesta == "frontal, temporal, parietal y occipital")
                         {
                             RespuestaCorrecta = true;
@@ -311,7 +286,7 @@ namespace Quiz
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
+                        RespuestaMath = float.Parse(Console.ReadLine());
                         if (Respuesta == "a" || Respuesta == "amnesia")
                         {
                             RespuestaCorrecta = true;
@@ -329,7 +304,7 @@ namespace Quiz
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
+                        RespuestaMath = float.Parse(Console.ReadLine());
                         if (Respuesta == "c" || Respuesta == "deja vu")
                         {
                             RespuestaCorrecta = true;
@@ -348,7 +323,7 @@ namespace Quiz
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
+                        RespuestaMath = float.Parse(Console.ReadLine());
                         if (Respuesta == "a")
                         {
                             RespuestaCorrecta = true;
@@ -367,7 +342,7 @@ namespace Quiz
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
+                        RespuestaMath = float.Parse(Console.ReadLine());
                         if (Respuesta == "c")
                         {
                             RespuestaCorrecta = true;
@@ -385,7 +360,7 @@ namespace Quiz
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
+                        RespuestaMath = float.Parse(Console.ReadLine());
                         if (Respuesta == "a")
                         {
                             RespuestaCorrecta = true;
@@ -404,7 +379,7 @@ namespace Quiz
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
+                        RespuestaMath = float.Parse(Console.ReadLine());
                         if (Respuesta == "b")
                         {
                             RespuestaCorrecta = true;
@@ -422,7 +397,7 @@ namespace Quiz
                         Console.WriteLine("\td) Plantar semillas en un invernadero antes de moverlas al jardín");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
+                        RespuestaMath = float.Parse(Console.ReadLine());
                         if (Respuesta == "b")
                         {
                             RespuestaCorrecta = true;
@@ -480,7 +455,7 @@ namespace Quiz
                         Console.WriteLine("\td) Newtons");
                         Console.Write("Escribe tu respuesta: ");
 
-                        Respuesta = Console.ReadLine().ToLower(); // se lee la respuesta del usuario
+                        RespuestaMath = float.Parse(Console.ReadLine()); // se lee la respuesta del usuario
                         Console.WriteLine();
                         // Se evalúa si se dio una respuesta correcta o no
                         if (Respuesta == "c" || Respuesta == "newton" || Respuesta == "newtons")
@@ -504,7 +479,7 @@ namespace Quiz
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
+                        RespuestaMath = float.Parse(Console.ReadLine());
                         if (Respuesta == "c" || Respuesta == "3.1416" || Respuesta == "3.14")
                         {
                             RespuestaCorrecta = true;
@@ -523,7 +498,7 @@ namespace Quiz
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
+                        RespuestaMath = float.Parse(Console.ReadLine());
                         if (Respuesta == "b")
                         {
                             RespuestaCorrecta = true;
@@ -542,7 +517,7 @@ namespace Quiz
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
+                        RespuestaMath = float.Parse(Console.ReadLine());
                         if (Respuesta == "b")
                         {
                             RespuestaCorrecta = true;
@@ -560,7 +535,7 @@ namespace Quiz
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
+                        RespuestaMath = float.Parse(Console.ReadLine());
                         if (Respuesta == "a" || Respuesta == "unidad central de procesamiento" || Respuesta == "central processing unit")
                         {
                             RespuestaCorrecta = true;
@@ -579,7 +554,7 @@ namespace Quiz
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
+                        RespuestaMath = float.Parse(Console.ReadLine());
                         if (Respuesta == "c")
                         {
                             RespuestaCorrecta = true;
@@ -598,7 +573,7 @@ namespace Quiz
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
+                        RespuestaMath = float.Parse(Console.ReadLine());
                         if (Respuesta == "d" || Respuesta == "internet protocol" || Respuesta == "protocolo de internet")
                         {
                             RespuestaCorrecta = true;
@@ -612,7 +587,7 @@ namespace Quiz
                         Console.WriteLine("¿Es cierto que la gran muralla china puede verse desde el espacio?: ");
                         Console.Write("¿Sí o no?: ");
 
-                        Respuesta = Console.ReadLine().ToLower();
+                        RespuestaMath = float.Parse(Console.ReadLine());
                         if (Respuesta == "no")
                         {
                             RespuestaCorrecta = true;
@@ -627,7 +602,7 @@ namespace Quiz
                         Console.Write("¿Sí o no?: ");
 
 
-                        Respuesta = Console.ReadLine().ToLower();
+                        RespuestaMath = float.Parse(Console.ReadLine());
                         if (Respuesta == "si" || Respuesta == "sí")
                         {
                             RespuestaCorrecta = true;
@@ -641,7 +616,7 @@ namespace Quiz
                         Console.WriteLine("La primera película de animación en color fue \"Blancanieves y los siete enanitos\"?");
                         Console.Write("¿Sí o no?: ");
 
-                        Respuesta = Console.ReadLine().ToLower();
+                        RespuestaMath = float.Parse(Console.ReadLine());
                         if (Respuesta == "no")
                         {
                             RespuestaCorrecta = true;
