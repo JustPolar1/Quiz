@@ -46,6 +46,7 @@ namespace Quiz
             {
                 Random pregunta = new Random(); // Instancia para generar números aleatorios
                 int preguntaAleatoria = pregunta.Next(preguntasBasicas.Count); // Genera la pregunta aleatoria
+                Console.WriteLine("¡Pregunta fácil!");
                 // Accedemos al número de pregunta aleatoria mediante el índice generado
                 switch (preguntasBasicas[preguntaAleatoria])
                 {
@@ -128,6 +129,7 @@ namespace Quiz
             {
                 Random pregunta = new Random(); // Instancia para generar números aleatorios
                 int preguntaAleatoria = pregunta.Next(preguntasBasicas.Count); // Genera la pregunta aleatoria
+                Console.WriteLine("¡Pregunta intermedia!");
                 // Accedemos al número de pregunta aleatoria mediante el índice generado
                 switch (preguntasBasicas[preguntaAleatoria])
                 {
