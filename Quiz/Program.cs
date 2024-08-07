@@ -1,4 +1,8 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Runtime;
+using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace Quiz
 {
@@ -13,15 +17,32 @@ namespace Quiz
             bool cambio = false; // Variable para saber si el usuario desea hacer cambios en los nombres
             int respuesta; // Variable para guardar las respuestas del usuario
             int ronda = 1; // El número de rondas que llevamos
+            int i = 0;
+
+            dynamic categoria = null; // Esta variable almacenará la categoría que actualmente se está jugando
+            Random nAleatorio = new Random(); // Variable que generará números aleatorios
+            int n; // Útil para guardar el número generado por nAleatorio, luego restarlo con los quizes disponibles
+            int faciles; // Número de preguntas fáciles que se generarán
+            int medias; // Número de preguntas intermedias que se generarán
+            int dificiles; // Número de preguntas difíciles que se generarán
+
+            int nQuizes = 5; // Número de quizes que hay en una ranodm
 
             // Se definen los objetos de los jugadores fuera del bloque `if` para que sean accesibles en toda la función
             Concursante jugador1 = null;
             Concursante jugador2 = null;
 
-            // Se le da la opción al usuario de jugar en modo multijugador o solitario
+            // Objetos para cada quiz
+            Quiz culturaGeneral = new Quiz();
+            Acertijos acertijo = new Acertijos();
+            Ciencias ciencia = new Ciencias();
+            Historia historia = new Historia();
+            Matematicas matematicas = new Matematicas();
+
             Console.WriteLine("¡Bienvenido al juego de Quizzes interactivo!");
             do // Ciclo principal, donde todo el programa se ejecuta
             {
+                seguirCiclo = true;
                 if (ronda != 1)
                 {
                     Console.WriteLine("¡Buena ronda! ¿te gustaría cambiar el modo de juego? Escribe 1 si es el caso, sino solo presiona cualquier tecla");
@@ -53,6 +74,7 @@ namespace Quiz
                 {
                     try
                     {
+                        // Se le da la opción al usuario de jugar en modo multijugador o solitario
                         Console.WriteLine("¿En qué modo de juego te gustaría jugar?");
                         Console.WriteLine("\t1. Solitario");
                         Console.WriteLine("\t2. Multijugador");
@@ -115,26 +137,86 @@ namespace Quiz
                 }
                 if (multijugador && cambio)
                 {
-                    Console.WriteLine("¡Bienvenido, jugador 2! ¿Cuál es tu nombre?: ");
+                    Console.Write("¡Bienvenido, jugador 2! ¿Cuál es tu nombre?: ");
                     jugador2.Nombre = Console.ReadLine();
 
                     Console.WriteLine($"¡Buen nombre, {jugador2.Nombre}!\nPresiona cualquier tecla para continuar: ");
                     Console.ReadKey(true);
                 }
-
-                if (ronda == 1) // Solo se mostrará en la primera ronda
+                do // Ciclo de opciones para la elección de una categoría
+                {
+                    try
+                    {
+                        Console.Clear();
+                        Console.WriteLine("¿En qué categoría te gustaría jugar?");
+                        Console.WriteLine("\t1. Cultura General");
+                        Console.WriteLine("\t2. Acertijos");
+                        Console.WriteLine("\t3. Ciencias");
+                        Console.WriteLine("\t4. Historia");
+                        Console.WriteLine("\t5. Matemáticas");
+                        Console.Write("Escribe aquí el número de la opción que quieras: ");
+                        switch (int.Parse(Console.ReadLine()))
+                        {
+                            case 1:
+                                Console.Clear();
+                                categoria = culturaGeneral;
+                                Console.WriteLine("Elegiste cultura general, ¡veamos cuánto sabes realmente del mundo! :D");
+                                break;
+                            case 2:
+                                Console.Clear();
+                                categoria = acertijo;
+                                Console.WriteLine("Bienvenido al Quiz de las adivinanzas, donde tu desespero es nuestra alegria");
+                                break;
+                            case 3:
+                                Console.Clear();
+                                categoria = ciencia;
+                                Console.WriteLine("¿Entonces te gustan las ciencias? en ese caso ¡Bario Molibdeno y Sulfuro!");
+                                break;
+                            case 4:
+                                Console.Clear();
+                                categoria = historia;
+                                Console.WriteLine("¡Historia será!");
+                                break;
+                            case 5:
+                                Console.Clear();
+                                categoria = matematicas;
+                                Console.WriteLine("¡Elegiste Matemáticas! ¿Sabes por qué el quiz de matemáticas estaba triste? ¡Porque tenía muchos problemas! :D");
+                                break;
+                            default:
+                                Console.Clear();
+                                Console.WriteLine("Esa no es una opción, por favor escribe únicamente el NÚMERO de la opción que prefieres");
+                                continue;
+                        };
+                        seguirCiclo = false;
+                    }
+                    catch (FormatException)
+                    {
+                        Console.WriteLine("Por favor, escribe únicamente números");
+                    }
+                    catch (OverflowException)
+                    {
+                        Console.WriteLine("Escribiste demasiados números");
+                    }
+                    finally
+                    {
+                        Console.WriteLine();
+                        Console.Write("Presiona cualquier tecla para continuar: ");
+                        Console.ReadKey(true);
+                        Console.Clear();
+                    }
+                } while (seguirCiclo);
+                if (ronda == 1) // Las instrucciones solo se mostrarán en la primera ronda
                 {
                     Console.Clear();
                     Console.WriteLine("Instrucciones:");
                     Console.WriteLine("A continuación se mostrarán rondas de 5 preguntas de la categoría seleccionada para cada jugador");
                     Console.WriteLine("La dificultad de cada pregunta será completamente aleatoria, y cada jugador recibirá la misma dificultad de preguntas");
-                    Console.WriteLine("Cada respuesta correcta se sumará 1 punto en el marcador");
+                    Console.WriteLine("Cada respuesta correcta sumará 1 punto en el marcador del jugador correspondiente");
                     Console.WriteLine("El jugador con el mayor puntuaje será declarado ganador de esta ronda!");
                     Console.WriteLine();
                     Console.WriteLine("¡Buena suerte!");
                     Console.ReadKey(true);
                 }
-
                 /* Lo que se implementará:
                  * A continuación seguiría implementar la jugabilidad, tengo pensado que hayan 3 variables
                  * que almacenen un número aleatorio, estas variable almacenarán el número de preguntas de 
@@ -146,9 +228,122 @@ namespace Quiz
                  * 30 pregunas se habrían terminado en ese caso
                  */
 
+                // el juego:
+                n = nAleatorio.Next(nQuizes);
+                nQuizes -= n;
+                faciles = nAleatorio.Next(n);
+
+                n = nAleatorio.Next(nQuizes);
+                nQuizes -= n;
+                medias = nAleatorio.Next(n);
+                
+                dificiles = nQuizes;
+                
+                for (; faciles > 0; faciles--)
+                {
+                    if (multijugador)
+                    {
+                        Console.WriteLine("Marcador:");
+                        Console.WriteLine($"{jugador1.Nombre}: {jugador1.Puntos}\t{jugador2.Nombre}: {jugador2.Puntos}");
+                        Console.WriteLine($"\n¡{jugador1.Nombre}! te toca a ti");
+                    }
+                    Console.Clear();
+                    categoria.Basico(jugador1);
+                    if (multijugador)
+                    {
+                        Console.WriteLine("Marcador:");
+                        Console.WriteLine($"{jugador1.Nombre}: {jugador1.Puntos}\t{jugador2.Nombre}: {jugador2.Puntos}");
+                        Console.WriteLine($"\n¡{jugador2.Nombre}! te toca a ti");
+                        categoria.Basico(jugador2);
+                        Console.Clear();
+                    }
+                }
+                for (; medias > 0; medias--)
+                {
+                    if (multijugador)
+                    {
+                        Console.WriteLine("Marcador:");
+                        Console.WriteLine($"{jugador1.Nombre}: {jugador1.Puntos}\t{jugador2.Nombre}: {jugador2.Puntos}");
+                        Console.WriteLine($"\n¡{jugador1.Nombre}! te toca a ti");
+                    }
+                    Console.Clear();
+                    categoria.Intermedio(jugador1);
+                    if (multijugador)
+                    {
+                        Console.WriteLine("Marcador:");
+                        Console.WriteLine($"{jugador1.Nombre}: {jugador1.Puntos}\t{jugador2.Nombre}: {jugador2.Puntos}");
+                        Console.WriteLine($"\n¡{jugador2.Nombre}! te toca a ti");
+                        categoria.Intermedio(jugador2);
+                        Console.Clear();
+                    }
+                }
+                for (; dificiles > 0; dificiles--)
+                {
+                    if (multijugador)
+                    {
+                        Console.WriteLine("Marcador:");
+                        Console.WriteLine($"{jugador1.Nombre}: {jugador1.Puntos}\t{jugador2.Nombre}: {jugador2.Puntos}");
+                        Console.WriteLine($"\n¡{jugador1.Nombre}! te toca a ti");
+                    }
+                    Console.Clear();
+                    categoria.Avanzado(jugador1);
+                    if (multijugador)
+                    {
+                        Console.WriteLine("Marcador:");
+                        Console.WriteLine($"{jugador1.Nombre}: {jugador1.Puntos}\t{jugador2.Nombre}: {jugador2.Puntos}");
+                        Console.WriteLine($"\n¡{jugador2.Nombre}! te toca a ti");
+                        categoria.Avanzado(jugador2);
+                        Console.Clear();
+                    }
+                }
+
+                if (multijugador)
+                {
+                    if (jugador1.Puntos == jugador2.Puntos)
+                    {
+                        Console.WriteLine($"¡Hubo un empate! Los dos ganan :D");
+                    }
+                    if (jugador1.Puntos > jugador2.Puntos)
+                    {
+                        Console.WriteLine($"¡{jugador1.Nombre} ha ganado esta ronda con: {jugador1.Puntos} puntos!");
+                        jugador1.Racha++;
+                        if (jugador1.Racha > 1)
+                        {
+                            Console.WriteLine($"¡{jugador1.Nombre} lleva una racha de: {jugador1.Racha}");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine($"¡{jugador2.Nombre} ha ganado esta ronda con: {jugador2.Puntos} puntos!");
+                        jugador2.Racha++;
+                        if (jugador2.Racha > 1)
+                        {
+                            Console.WriteLine($"¡{jugador2.Nombre} lleva una racha de: {jugador2.Racha}");
+                        }
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"¡Muy bien, {jugador1.Nombre}! contestaste correctamente {jugador1.Puntos} de 5");
+                }
                 ronda++;
-                Console.ReadKey(true);
                 Console.Clear();
+
+                jugador1.Puntos = 0;
+                jugador2.Puntos = 0;
+
+                Console.Write("Presiona 0 si te gustaría salir del juego: ");
+                if (Console.ReadKey(true).Key is ConsoleKey.D0 || Console.ReadKey(true).Key is ConsoleKey.NumPad0)
+                {
+                    terminar = true;
+                    Console.WriteLine("¡Adiós!");
+                    for (i = 1; i > 3; i++)
+                    {
+                        Thread.Sleep(200);
+                        Console.Write(".");
+                    }
+                }
+
             } while (!terminar); // Todo el programa se ejecutará hasta que la variable de terminar sea verdadera
         }
     }

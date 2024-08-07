@@ -17,7 +17,6 @@ namespace Quiz
             // Si aún hay entonces se seguirán generando preguntas
             else
             {
-                Console.WriteLine("Hola, Bienvenido al Quiz de las adivinanzas, donde tu desespero es nuestra alegria");
                 Console.WriteLine("Bienvenido al final fácil, ¿listo?, comencemos ;)");
                 Random pregunta = new Random();
                 int preguntaAleatoria = pregunta.Next(preguntasBasicas.Count);
@@ -251,6 +250,7 @@ namespace Quiz
             {
                 Random pregunta = new Random(); // Instancia para generar números aleatorios
                 int preguntaAleatoria = pregunta.Next(preguntasIntermedias.Count); // Genera la pregunta aleatoria
+                Console.WriteLine("¡Pregunta intermedia!");
                 // Accedemos al número de pregunta aleatoria mediante el índice generado
                 switch (preguntasIntermedias[preguntaAleatoria])
                 {

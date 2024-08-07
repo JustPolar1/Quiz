@@ -18,7 +18,8 @@ namespace Quiz
             {
                 Random pregunta = new Random(); // Instancia para generar números aleatorios
                 int preguntaAleatoria = pregunta.Next(preguntasBasicas.Count); // Genera la pregunta aleatoria
-                                                                               // Accedemos al número de pregunta aleatoria mediante el índice generado
+                Console.WriteLine("¡Pregunta fácil!");
+                // Accedemos al número de pregunta aleatoria mediante el índice generado
                 switch (preguntasBasicas[preguntaAleatoria])
                 {
                     case (1):
@@ -269,7 +270,7 @@ namespace Quiz
             // Se devuelve a su estado original la variable de respuesta correcta
             RespuestaCorrecta = false;
         }
-        public virtual void Intermedio(Concursante concursante)
+        public override void Intermedio(Concursante concursante)
         {
             // Primero se comprueba si quedan preguntas en esta categoría
             if (preguntasIntermedias.Count == 0)
@@ -281,8 +282,9 @@ namespace Quiz
             {
                 Random pregunta = new Random(); // Instancia para generar números aleatorios
                 int preguntaAleatoria = pregunta.Next(preguntasIntermedias.Count); // Genera la pregunta aleatoria
-                                                                                   // Accedemos al número de pregunta aleatoria mediante el índice generado
-                switch (preguntasIntermedias[preguntaAleatoria])
+                Console.WriteLine("¡Pregunta intermedia!");
+                // Accedemos al número de pregunta aleatoria mediante el índice generado
+                switch (preguntasIntermedias [preguntaAleatoria])
                 {
                     case (1):
                         Console.WriteLine("pregunta 1: ¿Cuál es el órgano encargado de filtrar la sangre en el cuerpo humano?");
@@ -531,7 +533,7 @@ namespace Quiz
             // Se devuelve a su estado original la variable de respuesta correcta
             RespuestaCorrecta = false;
         }
-        public virtual void Avanzado(Concursante concursante)
+        public override void Avanzado(Concursante concursante)
         {
             // Primero se comprueba si quedan preguntas en esta categoría
             if (preguntasAvanzadas.Count == 0)
@@ -543,7 +545,8 @@ namespace Quiz
             {
                 Random pregunta = new Random(); // Instancia para generar números aleatorios
                 int preguntaAleatoria = pregunta.Next(preguntasAvanzadas.Count); // Genera la pregunta aleatoria
-                                                                                   // Accedemos al número de pregunta aleatoria mediante el índice generado
+                Console.WriteLine("¡Pregunta avanzada!");
+                // Accedemos al número de pregunta aleatoria mediante el índice generado
                 switch (preguntasAvanzadas[preguntaAleatoria])
                 {
                     case (1):
