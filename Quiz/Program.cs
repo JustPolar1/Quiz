@@ -191,10 +191,12 @@ namespace Quiz
                     }
                     catch (FormatException)
                     {
+                        Console.Clear();
                         Console.WriteLine("Por favor, escribe únicamente números");
                     }
                     catch (OverflowException)
                     {
+                        Console.Clear();
                         Console.WriteLine("Escribiste demasiados números");
                     }
                     finally
@@ -341,10 +343,11 @@ namespace Quiz
                 {
                     terminar = true;
                     Console.WriteLine("¡Adiós!");
-                    for (i = 1; i > 3; i++)
+                    Console.WriteLine();
+                    for (i = 0; i < 3; i++)
                     {
-                        Thread.Sleep(200);
                         Console.Write(".");
+                        Thread.Sleep(1000);
                     }
                 }
 
