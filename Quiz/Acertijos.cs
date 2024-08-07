@@ -426,7 +426,7 @@ namespace Quiz
                     concursante.Puntos += 1;
                 }
                 // Se elimina el número de la pregunta anteriormente dada para evitar repetidos
-                preguntasBasicas.RemoveAt(preguntaAleatoria);
+                preguntasIntermedias.RemoveAt(preguntaAleatoria);
             }
 
 
@@ -633,7 +633,7 @@ namespace Quiz
                     concursante.Puntos += 1;
                 }
                 // Se elimina el número de la pregunta anteriormente dada para evitar repetidos
-                preguntasBasicas.RemoveAt(preguntaAleatoria);
+                preguntasAvanzadas.RemoveAt(preguntaAleatoria);
             }
 
 

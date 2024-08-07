@@ -70,7 +70,7 @@ namespace Quiz
                     Console.Clear();
                 }
 
-                while (ronda == 1) // Ciclo de opciones de modo de juego
+                while (ronda == 1 && seguirCiclo) // Ciclo de opciones de modo de juego
                 {
                     try
                     {
@@ -98,7 +98,6 @@ namespace Quiz
                                 Console.WriteLine($"Hermano, el número: {respuesta} no es una respuesta, por fa elige entre el 1 y el 2");
                                 break;
                         }
-                        break;
                     }
                     catch (FormatException)
                     {
@@ -119,6 +118,7 @@ namespace Quiz
                         Console.Clear();
                     }
                 }
+                seguirCiclo = true;
                 // En la primera ronda siempre se le preguntará al jugador su nombre
                 if (ronda == 1)
                 {
@@ -231,23 +231,22 @@ namespace Quiz
                 // el juego:
                 n = nAleatorio.Next(nQuizes);
                 nQuizes -= n;
-                faciles = nAleatorio.Next(n);
+                faciles = n;
 
                 n = nAleatorio.Next(nQuizes);
                 nQuizes -= n;
-                medias = nAleatorio.Next(n);
+                medias = n;
                 
                 dificiles = nQuizes;
-                
                 for (; faciles > 0; faciles--)
                 {
+                    Console.Clear();
                     if (multijugador)
                     {
                         Console.WriteLine("Marcador:");
                         Console.WriteLine($"{jugador1.Nombre}: {jugador1.Puntos}\t{jugador2.Nombre}: {jugador2.Puntos}");
                         Console.WriteLine($"\n¡{jugador1.Nombre}! te toca a ti");
                     }
-                    Console.Clear();
                     categoria.Basico(jugador1);
                     if (multijugador)
                     {
@@ -260,13 +259,13 @@ namespace Quiz
                 }
                 for (; medias > 0; medias--)
                 {
+                    Console.Clear();
                     if (multijugador)
                     {
                         Console.WriteLine("Marcador:");
                         Console.WriteLine($"{jugador1.Nombre}: {jugador1.Puntos}\t{jugador2.Nombre}: {jugador2.Puntos}");
                         Console.WriteLine($"\n¡{jugador1.Nombre}! te toca a ti");
                     }
-                    Console.Clear();
                     categoria.Intermedio(jugador1);
                     if (multijugador)
                     {
@@ -279,13 +278,13 @@ namespace Quiz
                 }
                 for (; dificiles > 0; dificiles--)
                 {
+                    Console.Clear();
                     if (multijugador)
                     {
                         Console.WriteLine("Marcador:");
                         Console.WriteLine($"{jugador1.Nombre}: {jugador1.Puntos}\t{jugador2.Nombre}: {jugador2.Puntos}");
                         Console.WriteLine($"\n¡{jugador1.Nombre}! te toca a ti");
                     }
-                    Console.Clear();
                     categoria.Avanzado(jugador1);
                     if (multijugador)
                     {
@@ -325,6 +324,10 @@ namespace Quiz
                 else
                 {
                     Console.WriteLine($"¡Muy bien, {jugador1.Nombre}! contestaste correctamente {jugador1.Puntos} de 5");
+                    Console.WriteLine();
+                    Console.Write("Presiona cualquier tecla para continuar: ");
+
+                    Console.ReadKey(true);
                 }
                 ronda++;
                 Console.Clear();
@@ -333,7 +336,7 @@ namespace Quiz
                 jugador2.Puntos = 0;
 
                 Console.Write("Presiona 0 si te gustaría salir del juego: ");
-                if (Console.ReadKey(true).Key is ConsoleKey.D0 || Console.ReadKey(true).Key is ConsoleKey.NumPad0)
+                if (Console.ReadKey(true).KeyChar.ToString() == "0")
                 {
                     terminar = true;
                     Console.WriteLine("¡Adiós!");

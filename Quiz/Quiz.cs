@@ -27,8 +27,9 @@ namespace Quiz
         {
             1, 2, 3, 4, 5, 6, 7, 8, 9, 10
         };
-        public string Respuesta { get => Respuesta; set => Respuesta = value; }
-        public bool RespuestaCorrecta { get => RespuestaCorrecta; set => RespuestaCorrecta = value; }
+        public string Respuesta { get; set; }
+        public bool RespuestaCorrecta { get; set; }
+
 
         // Cada método de cada categoría generará UNA pregunta aleatoria de esa categoría dependiendo la dificultad
         public virtual void Basico(Concursante concursante)
