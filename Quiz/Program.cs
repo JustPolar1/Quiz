@@ -238,6 +238,7 @@ namespace Quiz
                 medias = n;
                 
                 dificiles = nQuizes;
+
                 for (; faciles > 0; faciles--)
                 {
                     Console.Clear();
