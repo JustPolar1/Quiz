@@ -17,7 +17,6 @@ namespace Quiz
             bool cambio = false; // Variable para saber si el usuario desea hacer cambios en los nombres
             int respuesta; // Variable para guardar las respuestas del usuario
             int ronda = 1; // El número de rondas que llevamos
-            int i = 0;
 
             dynamic categoria = null; // Esta variable almacenará la categoría que actualmente se está jugando
             Random nAleatorio = new Random(); // Variable que generará números aleatorios
@@ -344,7 +343,7 @@ namespace Quiz
                     terminar = true;
                     Console.WriteLine("¡Adiós!");
                     Console.WriteLine();
-                    for (i = 0; i < 3; i++)
+                    for (int i = 0; i < 3; i++)
                     {
                         Console.Write(".");
                         Thread.Sleep(1000);
