@@ -94,7 +94,21 @@ namespace Quiz
                         }
                         break;
                     case (3):
-                        Console.WriteLine("");
+                        Console.WriteLine("¿Cuál es la capital de Rusia?");
+                        Console.WriteLine("\ta) Prusia");
+                        Console.WriteLine("\tb) Prípyat");
+                        Console.WriteLine("\tc) Moscow");
+                        Console.WriteLine("\td) Berlín");
+
+                        Respuesta = Console.ReadLine().ToLower();
+                        if (Respuesta == "c" || Respuesta == "peru" || Respuesta == "perú")
+                        {
+                            RespuestaCorrecta = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: Perú");
+                        }
                         break;
                     case (5):
                         Console.WriteLine("¿Cuál es el océano más grande del mundo?");

@@ -25,7 +25,7 @@ namespace Quiz
             int medias; // Número de preguntas intermedias que se generarán
             int dificiles; // Número de preguntas difíciles que se generarán
 
-            int nQuizes = 5; // Número de quizes que hay en una ranodm
+            int nQuizes = 6; // Número de quizes que hay en una ranodm
 
             // Se definen los objetos de los jugadores fuera del bloque `if` para que sean accesibles en toda la función
             Concursante jugador1 = null;
@@ -38,10 +38,18 @@ namespace Quiz
             Historia historia = new Historia();
             Matematicas matematicas = new Matematicas();
 
+            for (int i = 0; i < 30; i++)
+            {
+               Console.WriteLine(nAleatorio.Next(6));
+            }
+            Console.ReadKey();
+
             Console.WriteLine("¡Bienvenido al juego de Quizzes interactivo!");
             do // Ciclo principal, donde todo el programa se ejecuta
             {
+                nQuizes = 6;
                 seguirCiclo = true;
+                cambio = false;
                 if (ronda != 1)
                 {
                     Console.WriteLine("¡Buena ronda! ¿te gustaría cambiar el modo de juego? Escribe 1 si es el caso, sino solo presiona cualquier tecla");
@@ -230,15 +238,15 @@ namespace Quiz
                  */
 
                 // el juego:
-                n = nAleatorio.Next(nQuizes);
-                nQuizes -= n;
-                faciles = n;
+                n = nAleatorio.Next(nQuizes); // 2
+                nQuizes -= n; //  5 - 2
+                faciles = n; // 2
 
-                n = nAleatorio.Next(nQuizes);
-                nQuizes -= n;
-                medias = n;
+                n = nAleatorio.Next(nQuizes); // 0 
+                nQuizes -= n; // 3
+                medias = n; // 0
                 
-                dificiles = nQuizes;
+                dificiles = nQuizes - 1; // 3
 
                 for (; faciles > 0; faciles--)
                 {
@@ -303,7 +311,8 @@ namespace Quiz
                     if (jugador1.Puntos == jugador2.Puntos)
                     {
                         Console.WriteLine($"¡Hubo un empate! Los dos ganan :D");
-                    }
+                        Console.ReadKey(true);
+                    } 
                     if (jugador1.Puntos > jugador2.Puntos)
                     {
                         Console.WriteLine($"¡{jugador1.Nombre} ha ganado esta ronda con: {jugador1.Puntos} puntos!");
@@ -311,9 +320,10 @@ namespace Quiz
                         if (jugador1.Racha > 1)
                         {
                             Console.WriteLine($"¡{jugador1.Nombre} lleva una racha de: {jugador1.Racha}");
+                            Console.ReadKey(true);
                         }
                     }
-                    else
+                    else if (jugador1.Puntos < jugador2.Puntos)
                     {
                         Console.WriteLine($"¡{jugador2.Nombre} ha ganado esta ronda con: {jugador2.Puntos} puntos!");
                         jugador2.Racha++;
@@ -321,6 +331,7 @@ namespace Quiz
                         {
                             Console.WriteLine($"¡{jugador2.Nombre} lleva una racha de: {jugador2.Racha}");
                         }
+                        Console.ReadKey(true);
                     }
                 }
                 else
