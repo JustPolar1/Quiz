@@ -31,7 +31,6 @@ namespace Quiz
         };
 
         // Cada método de cada categoría generará UNA pregunta aleatoria de esa categoría dependiendo la dificultad
-        private float RespuestaMath;
         public override void Basico(Concursante concursante)
         {
             // hola prueba
@@ -164,54 +163,46 @@ namespace Quiz
                                 }
                                 break;
                             case (8):
-                                Console.WriteLine("¿Quién pintó la noche estrellada?");
-                                Console.WriteLine("\ta) Vicente Van Gogh");
-                                Console.WriteLine("\tb) Rembrandt");
-                                Console.WriteLine("\tc) Velazquez");
+                                Console.WriteLine("¿Cuál es el resultado de la siguiente operación?: 5.2 - 7.8");
                                 Console.Write("Escribe tu respuesta: ");
 
-
-                                Respuesta = Console.ReadLine().ToLower();
-                                if (Respuesta == "a" || Respuesta == "vicente van gogh" || Respuesta == "van gogh")
+                                RespuestaMath = float.Parse(Console.ReadLine());
+                                if (RespuestaMath == -2.6f)
                                 {
                                     RespuestaCorrecta = true;
                                 }
                                 else
                                 {
-                                    Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era a) Vicente Van Gogh");
+                                    Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era -2.6");
                                 }
                                 break;
                             case (9):
-                                Console.WriteLine("¿Quién es denominado el rey del rock en USA?");
-                                Console.WriteLine("\ta) Elvis Presley");
-                                Console.WriteLine("\tb) Michael Jackson");
-                                Console.WriteLine("\tc) The Rolling Stones");
+                                Console.WriteLine("¿Cuánto es 40 * 0.5?");
                                 Console.Write("Escribe tu respuesta: ");
 
 
-                                Respuesta = Console.ReadLine().ToLower();
-                                if (Respuesta == "a" || Respuesta == "elvis presley" || Respuesta == "elvis")
+                                RespuestaMath = float.Parse(Console.ReadLine());
+                                if (RespuestaMath == 20)
                                 {
                                     RespuestaCorrecta = true;
                                 }
                                 else
                                 {
-                                    Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era a) Elvis Presley");
+                                    Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 20");
                                 }
                                 break;
                             case (10):
-                                Console.WriteLine("¿Las medusas tienen corazón?");
-                                Console.Write("Escribe tu respuesta (Sí o no): ");
+                                Console.WriteLine("¿Cuánto suman los ángulos de un triángulo?");
+                                Console.Write("Escribe tu respuesta: ");
 
-
-                                Respuesta = Console.ReadLine().ToLower();
-                                if (Respuesta == "no" || Respuesta == "0")
+                                RespuestaMath = float.Parse(Console.ReadLine());
+                                if (RespuestaMath == 180)
                                 {
                                     RespuestaCorrecta = true;
                                 }
                                 else
                                 {
-                                    Console.WriteLine("¡Respuesta incorrecta! las medusas no poseen un corazón");
+                                    Console.WriteLine("¡Respuesta incorrecta! La respuesta era 180");
                                 }
                                 break;
                             default:
@@ -299,148 +290,130 @@ namespace Quiz
                         }
                         break;
                     case (3):
-                        Console.WriteLine("¿Cuáles son los cuatro lóbulos en los que se divide el cerebro?");
+                        Console.WriteLine("¿Cual es el area de un triangulo con base de 10cm y altura de 5cm?");
                         Console.Write("Escribe tu respuesta: ");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "d" || Respuesta == "frontal, temporal, parietal y occipital")
+                        if (Respuesta == "25cm^2" || Respuesta == "25 centimetros cuadrados")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era d) Frontal, temporal, parietal y occipital");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 25cm^2");
                         }
                         break;
                     case (4):
-                        Console.WriteLine("¿Cómo se le llama a la pérdida de memoria?");
-                        Console.WriteLine("\ta) Amnesia");
-                        Console.WriteLine("\tb) Contusión");
-                        Console.WriteLine("\tc) Resaca");
-                        Console.WriteLine("\td) Alzheimer");
+                        Console.WriteLine("¿si un numero es multiplicado por 3 y se le suman 12 y el resultado es 24 cual es el numero?");
+                        
                         Console.Write("Escribe tu respuesta: ");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "a" || Respuesta == "amnesia")
+                        if (Respuesta == "4" || Respuesta == "cuatro")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era a) Amnesia");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 4");
                         }
                         break;
                     case (5):
-                        Console.WriteLine("¿Cómo se llama esa sensación de que una experiencia se ha vivido anteriormente?");
-                        Console.WriteLine("\ta) Nostalgia");
-                        Console.WriteLine("\tb) Recuerdos");
-                        Console.WriteLine("\tc) Deja Vu");
+                        Console.WriteLine("¿Cual es el valor de la raiz de 144?");
+                        
                         Console.Write("Escribe tu respuesta: ");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "c" || Respuesta == "deja vu")
+                        if (Respuesta == "12" || Respuesta == "doce")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era c) Leonardo Da Vinci");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era doce");
                         }
                         break;
                     case (6):
-                        Console.WriteLine("¿Qué mide el Producto Interno Bruto de un país");
-                        Console.WriteLine("\ta) La producción total de bienes y servicios en un país durante un período de tiempo");
-                        Console.WriteLine("\tb) La riqueza de cada habitante");
-                        Console.WriteLine("\tc) Tasa de inflación");
-                        Console.WriteLine("\td) El saldo de la balanza en bolsa");
+                        Console.WriteLine("¿Cual es la mediana de los siguientes numeros 4,8,6,5,7?");
+                        
                         Console.Write("Escribe tu respuesta: ");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "a")
+                        if (Respuesta == "6" || Respuesta == "seis")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era a) La producción total de bienes y servicios en un país durante un período de tiempo");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 6");
                         }
                         break;
                     case (7):
-                        Console.WriteLine("¿Qué es el déficit fiscal");
-                        Console.WriteLine("\ta) El exceso de ingresos del gobierno sobre sus gastos");
-                        Console.WriteLine("\tb) La diferencia entre los ingresos y gastos del gobierno cuando los ingresos superan a los gastos");
-                        Console.WriteLine("\tc) El exceso de gastos del gobierno sobre sus ingresos");
-                        Console.WriteLine("\td) La reducción en el nivel de deuda pública");
+                        Console.WriteLine("¿Cual es el perimetro de un rectangulo con longitud de 10cm y ancho de 6cm?");
+                       
                         Console.Write("Escribe tu respuesta: ");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "c")
+                        if (Respuesta == "32cm" || Respuesta == "treinta y dos centimetros")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era c) El exceso de gastos del gobierno sobre sus ingresos");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 32cm");
                         }
                         break;
                     case (8): // Esta también se deja
-                        Console.WriteLine("¿Qué es un monopolio?");
-                        Console.WriteLine("\ta) Un mercado en el que hay solo un vendedor y muchos compradores");
-                        Console.WriteLine("\tb) Un mercado con muchos vendedores y compradores, donde todos los productos son idénticos");
-                        Console.WriteLine("\tc) Un mercado en el que hay varios vendedores que ofrecen productos diferenciados");
+                        Console.WriteLine("¿Si un cilindro tiene un radio de 3cm y una altura de 7cm cual es su volumen?");
+                      
                         Console.Write("Escribe tu respuesta: ");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "a")
+                        if (Respuesta == "197.92cm^3" || Respuesta == "197.92cm cubicos")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era a) Un mercado en el que hay solo un vendedor y muchos compradores");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 197.92cm^3");
                         }
                         break;
                     case (9):
-                        Console.WriteLine("¿Cuál es la función de los fertilizantes en jardinería?");
-                        Console.WriteLine("\ta) Mejorar la textura del suelo y aumentar el crecimiento de malas hierbas");
-                        Console.WriteLine("\tb) Proporcionar nutrientes esenciales a las plantas para su crecimiento y desarrollo");
-                        Console.WriteLine("\tc) Reducir la cantidad de agua necesaria para el riego");
-                        Console.WriteLine("\td) Evitar que las plantas florezcan");
+                        Console.WriteLine("¿Cuál es el valor de la ecuacion 2x-3=7?");
+                       
                         Console.Write("Escribe tu respuesta: ");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "b")
+                        if (Respuesta == "5" || Respuesta == "cinco")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era b) Proporcionar nutrientes esenciales a las plantas para su crecimiento y desarrollo");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era cinco 5");
                         }
                         break;
                     case (10):
-                        Console.WriteLine("¿Qué es la siembra directa?");
-                        Console.WriteLine("\ta) Plantar semillas en el suelo sin prepararlo adecuadamente");
-                        Console.WriteLine("\tb) Sembrar las semillas directamente en el lugar donde crecerán sin trasplante posterior");
-                        Console.WriteLine("\tc) Cultivar plantas en macetas antes de trasladarlas al jardín");
-                        Console.WriteLine("\td) Plantar semillas en un invernadero antes de moverlas al jardín");
+                        Console.WriteLine("¿Cual es el valor de la suma de los angulos internos de un hexagono?");
+                        
+                        Console.WriteLine("Escribe tu respuesta");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "b")
+                        if (Respuesta == "720°" || Respuesta == "setescientos veinte grados")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era b) Sembrar las semillas directamente en el lugar donde crecerán sin trasplante posterior");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 720°");
                         }
                         break;
                     default:
