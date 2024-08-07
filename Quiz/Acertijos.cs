@@ -20,204 +20,215 @@ namespace Quiz
                 Console.WriteLine("Bienvenido al final fácil, ¿listo?, comencemos ;)");
                 Random pregunta = new Random();
                 int preguntaAleatoria = pregunta.Next(preguntasBasicas.Count);
-                switch (preguntasBasicas[preguntaAleatoria])
+                try
                 {
-                    case (1):
-                        Console.WriteLine("Blanco es, la gallina lo pone, con aceite se fríe y con pan se come. ¿Qué cosa es?");
-                        Console.Write("Escribe tu respuesta: ");
+                    switch (preguntasBasicas[preguntaAleatoria])
+                    {
+                        case (1):
+                            Console.WriteLine("Blanco es, la gallina lo pone, con aceite se fríe y con pan se come. ¿Qué cosa" +
+                                " es?");
+                            Console.Write("Escribe tu respuesta: ");
 
-                        Console.WriteLine();
 
-                        Respuesta = Console.ReadLine();
-                        if (Respuesta.ToLower() == "el huevo" || Respuesta.ToLower() == "un huevo")
-                        {
+                            Console.WriteLine();
 
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
+                            Respuesta = Console.ReadLine();
+                            if (Respuesta.ToLower() == "el huevo" || Respuesta.ToLower() == "un huevo")
+                            {
 
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !EL HUEVO¡ :D");
-                        }
-                        break;
+                                RespuestaCorrecta = true;
+                            }
+                            else
+                            {
 
-                    case (2):
-                        Console.WriteLine("Oro parece, plata no es. Abran las cortinas y verán lo que es");
-                        Console.Write("Escribe tu respuesta: ");
+                                Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !EL HUEVO¡ :D");
+                            }
+                            break;
 
-                        Console.WriteLine();
+                        case (2):
+                            Console.WriteLine("Oro parece, plata no es. Abran las cortinas y verán lo que es");
+                            Console.Write("Escribe tu respuesta: ");
 
-                        Respuesta = Console.ReadLine();
-                        if (Respuesta.ToLower() == "el platano" || Respuesta.ToLower() == "un platano")
-                        {
+                            Console.WriteLine();
 
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
+                            Respuesta = Console.ReadLine();
+                            if (Respuesta.ToLower() == "el platano" || Respuesta.ToLower() == "un platano")
+                            {
 
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !EL PLATANO¡ :D ");
-                        }
-                        break;
-                    case (3):
-                        Console.WriteLine("Tiene dientes y no come, tiene cabeza y no es hombre. ¿Qué es?");
-                        Console.Write("Escribe tu respuesta: ");
+                                RespuestaCorrecta = true;
+                            }
+                            else
+                            {
 
-                        Console.WriteLine();
+                                Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !EL PLATANO¡ :D ");
+                            }
+                            break;
+                        case (3):
+                            Console.WriteLine("Tiene dientes y no come, tiene cabeza y no es hombre. ¿Qué es?");
+                            Console.Write("Escribe tu respuesta: ");
 
-                        Respuesta = Console.ReadLine();
-                        if (Respuesta.ToLower() == "el huevo" || Respuesta.ToLower() == "un huevo")
-                        {
+                            Console.WriteLine();
 
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
+                            Respuesta = Console.ReadLine();
+                            if (Respuesta.ToLower() == "el ajo" || Respuesta.ToLower() == "un ajo")
+                            {
 
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !EL HUEVO¡ :D");
-                        }
-                        break;
+                                RespuestaCorrecta = true;
+                            }
+                            else
+                            {
 
-                    case (4):
-                        Console.WriteLine("Tengo hipo al decir mi nombre ¿Quien soy?");
-                        Console.Write("Escribe tu respuesta: ");
+                                Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !EL AJO¡ :D");
+                            }
+                            break;
 
-                        Console.WriteLine();
+                        case (4):
+                            Console.WriteLine("Tengo hipo al decir mi nombre ¿Quien soy?");
+                            Console.Write("Escribe tu respuesta: ");
 
-                        Respuesta = Console.ReadLine();
-                        if (Respuesta.ToLower() == "el hipopótamo" || Respuesta.ToLower() == "un hipopótamo")
-                        {
+                            Console.WriteLine();
 
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
+                            Respuesta = Console.ReadLine();
+                            if (Respuesta.ToLower() == "el hipopótamo" || Respuesta.ToLower() == "un hipopótamo")
+                            {
 
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !EL HIPOPOTAMO¡ :D");
-                        }
+                                RespuestaCorrecta = true;
+                            }
+                            else
+                            {
 
-                        break;
-                    case (5):
-                        Console.WriteLine("Mi nombre empieza con bo, no soy bota ni botijo, !bobo, tonto¡, si ya te lo he dicho. ¿Qué soy?");
-                        Console.Write("Escribe tu respuesta: ");
+                                Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !EL HIPOPOTAMO¡ :D");
+                            }
 
-                        Console.WriteLine();
+                            break;
+                        case (5):
+                            Console.WriteLine("Mi nombre empieza con bo, no soy bota ni botijo, !bobo, tonto¡, si ya te lo he dicho. ¿Qué soy?");
+                            Console.Write("Escribe tu respuesta: ");
 
-                        Respuesta = Console.ReadLine();
-                        if (Respuesta.ToLower() == "el botón" || Respuesta.ToLower() == "un botón")
-                        {
+                            Console.WriteLine();
 
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
+                            Respuesta = Console.ReadLine();
+                            if (Respuesta.ToLower() == "el botón" || Respuesta.ToLower() == "un botón")
+                            {
 
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !EL BOTÓN¡ :D");
-                        }
+                                RespuestaCorrecta = true;
+                            }
+                            else
+                            {
 
-                        break;
-                    case (6):
-                        Console.WriteLine("¿Qué es algo y a la vez nada?");
-                        Console.Write("Escribe tu respuesta: ");
+                                Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !EL BOTÓN¡ :D");
+                            }
 
-                        Console.WriteLine();
+                            break;
+                        case (6):
+                            Console.WriteLine("¿Qué es algo y a la vez nada?");
+                            Console.Write("Escribe tu respuesta: ");
 
-                        Respuesta = Console.ReadLine();
-                        if (Respuesta.ToLower() == "el pez" || Respuesta.ToLower() == "un pez")
-                        {
+                            Console.WriteLine();
 
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
+                            Respuesta = Console.ReadLine();
+                            if (Respuesta.ToLower() == "el pez" || Respuesta.ToLower() == "un pez")
+                            {
 
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !EL PEZ¡ :D");
-                        }
+                                RespuestaCorrecta = true;
+                            }
+                            else
+                            {
 
-                        break;
-                    case (7):
-                        Console.WriteLine("Si quiero caminar salto, y si quiero parar me agacho. ¿Que soy?");
-                        Console.Write("Escribe tu respuesta: ");
+                                Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !EL PEZ¡ :D");
+                            }
 
-                        Console.WriteLine();
+                            break;
+                        case (7):
+                            Console.WriteLine("Si quiero caminar salto, y si quiero parar me agacho. ¿Que soy?");
+                            Console.Write("Escribe tu respuesta: ");
 
-                        Respuesta = Console.ReadLine();
-                        if (Respuesta.ToLower() == "el canguro" || Respuesta.ToLower() == "un canguro")
-                        {
+                            Console.WriteLine();
 
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
+                            Respuesta = Console.ReadLine();
+                            if (Respuesta.ToLower() == "el canguro" || Respuesta.ToLower() == "un canguro")
+                            {
 
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !EL CANGURO¡ :D");
-                        }
+                                RespuestaCorrecta = true;
+                            }
+                            else
+                            {
 
-                        break;
-                    case (8):
-                        Console.WriteLine("¿Quien hace en los troncos su oscura casita, y allí esconde, avara, cuanto necesita?");
-                        Console.Write("Escribe tu respuesta: ");
+                                Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !EL CANGURO¡ :D");
+                            }
 
-                        Console.WriteLine();
+                            break;
+                        case (8):
+                            Console.WriteLine("¿Quien hace en los troncos su oscura casita, y allí esconde, avara, cuanto necesita?");
+                            Console.Write("Escribe tu respuesta: ");
 
-                        Respuesta = Console.ReadLine();
-                        if (Respuesta.ToLower() == "La ardilla" || Respuesta.ToLower() == "una ardilla")
-                        {
+                            Console.WriteLine();
 
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
+                            Respuesta = Console.ReadLine();
+                            if (Respuesta.ToLower() == "La ardilla" || Respuesta.ToLower() == "una ardilla")
+                            {
 
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !LA ARDILLA¡ :D");
-                        }
+                                RespuestaCorrecta = true;
+                            }
+                            else
+                            {
 
-                        break;
-                    case (9):
-                        Console.WriteLine("Abierto siempre estoy pata todos los niños. Cerrado y solo me quedo los domingos. ¿Qué soy?");
-                        Console.Write("Escribe tu respuesta: ");
+                                Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !LA ARDILLA¡ :D");
+                            }
 
-                        Console.WriteLine();
+                            break;
+                        case (9):
+                            Console.WriteLine("Abierto siempre estoy pata todos los niños. Cerrado y solo me quedo los domingos. ¿Qué soy?");
+                            Console.Write("Escribe tu respuesta: ");
 
-                        Respuesta = Console.ReadLine();
-                        if (Respuesta.ToLower() == "la escuela" || Respuesta.ToLower() == "el colegio")
-                        {
+                            Console.WriteLine();
 
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
+                            Respuesta = Console.ReadLine();
+                            if (Respuesta.ToLower() == "la escuela" || Respuesta.ToLower() == "el colegio")
+                            {
 
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !LA ESCUELA/COLEGIO¡ :D");
-                        }
+                                RespuestaCorrecta = true;
+                            }
+                            else
+                            {
 
-                        break;
-                    case (10):
-                        Console.WriteLine("¿Que viene una vez en un minuto, dos veces en un momento y nunca en 1,000 años?");
-                        Console.Write("Escribe tu respuesta: ");
+                                Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !LA ESCUELA/COLEGIO¡ :D");
+                            }
 
-                        Console.WriteLine();
+                            break;
+                        case (10):
+                            Console.WriteLine("¿Que viene una vez en un minuto, dos veces en un momento y nunca en 1,000 años?");
+                            Console.Write("Escribe tu respuesta: ");
 
-                        Respuesta = Console.ReadLine();
-                        if (Respuesta.ToLower() == "La m" || Respuesta.ToLower() == "m")
-                        {
+                            Console.WriteLine();
 
-                            RespuestaCorrecta = true;
-                        }
-                        else
-                        {
+                            Respuesta = Console.ReadLine();
+                            if (Respuesta.ToLower() == "La m" || Respuesta.ToLower() == "m")
+                            {
 
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !LA LETRA M¡ :D");
-                        }
+                                RespuestaCorrecta = true;
+                            }
+                            else
+                            {
 
-                        break;
-                    default:
-                        break;
+                                Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !LA LETRA M¡ :D");
+                            }
 
+                            break;
+                        default:
+                            break;
+
+
+
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Parece que hubo un error");
 
 
                 }
-                // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
+                    // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
                 if (RespuestaCorrecta)
                 {
                     Console.WriteLine("¡Respuesta correcta!");
@@ -590,7 +601,7 @@ namespace Quiz
                         break;
                     case (9):
                         Console.WriteLine("Bolas grandes, colgantes, gordas y peludas que son voluminosas y hermosas. " +
-                            "¿Qué es?");
+                            "¿Qué son?");
                         Console.Write("Escribe tu respuesta: ");
 
 
@@ -606,20 +617,20 @@ namespace Quiz
                         }
                         break;
                     case (10):
-                        Console.WriteLine("Bolas grandes, colgantes, gordas y peludas que son voluminosas y hermosas. " +
-                            "¿Qué es?");
+                        Console.WriteLine("Si soy niño, niño me quedo. Si soy adolescente, adolescente me quedo. Tengo ojos" +
+                            "pero no veo, tengo boca pero no hablo, tengo oídos pero no escucho. Soy inmutable. ¿Qué es?");
                         Console.Write("Escribe tu respuesta: ");
 
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "los cocos" || Respuesta == "cocos")
+                        if (Respuesta == "un retrato" || Respuesta == "un cuadro")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: LOS COCOS");
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: UN RETRATO/CUADRO");
                         }
                         break;
                     default:
