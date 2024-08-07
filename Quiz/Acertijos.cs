@@ -17,7 +17,7 @@ namespace Quiz
             // Si aún hay entonces se seguirán generando preguntas
             else
             {
-                Console.WriteLine("Hola, Bienvenido al Quiz de las adivinanzas, donde tu desespero es nuestra alegria");
+                Console.WriteLine("Hola, Bienvenido al Quiz de las adivinanzas, donde tu desespero es nuestra alegría");
                 Console.WriteLine("Bienvenido al final fácil, ¿listo?, comencemos ;)");
                 Random pregunta = new Random();
                 int preguntaAleatoria = pregunta.Next(preguntasBasicas.Count);
@@ -34,7 +34,7 @@ namespace Quiz
                             Console.WriteLine();
 
                             Respuesta = Console.ReadLine();
-                            if (Respuesta.ToLower() == "el huevo" || Respuesta.ToLower() == "un huevo")
+                            if (Respuesta.ToLower() == "el huevo" || Respuesta.ToLower() == "un huevo" || Respuesta.ToLower() == "huevo")
                             {
 
                                 RespuestaCorrecta = true;
@@ -53,7 +53,7 @@ namespace Quiz
                             Console.WriteLine();
 
                             Respuesta = Console.ReadLine();
-                            if (Respuesta.ToLower() == "el platano" || Respuesta.ToLower() == "un platano")
+                            if (Respuesta.ToLower() == "el platano" || Respuesta.ToLower() == "un platano" || Respuesta.ToLower() == "platano" )
                             {
 
                                 RespuestaCorrecta = true;
@@ -71,7 +71,7 @@ namespace Quiz
                             Console.WriteLine();
 
                             Respuesta = Console.ReadLine();
-                            if (Respuesta.ToLower() == "el ajo" || Respuesta.ToLower() == "un ajo")
+                            if (Respuesta.ToLower() == "el ajo" || Respuesta.ToLower() == "un ajo" || Respuesta.ToLower() == "ajo" )
                             {
 
                                 RespuestaCorrecta = true;
@@ -90,7 +90,7 @@ namespace Quiz
                             Console.WriteLine();
 
                             Respuesta = Console.ReadLine();
-                            if (Respuesta.ToLower() == "el hipopótamo" || Respuesta.ToLower() == "un hipopótamo")
+                            if (Respuesta.ToLower() == "el hipopotamo" || Respuesta.ToLower() == "un hipopotamo" || Respuesta.ToLower() == "hipopotamo")
                             {
 
                                 RespuestaCorrecta = true;
@@ -98,7 +98,7 @@ namespace Quiz
                             else
                             {
 
-                                Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !EL HIPOPOTAMO¡ :D");
+                                Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta es !EL HIPOPÓTAMO¡ :D");
                             }
 
                             break;
@@ -109,7 +109,7 @@ namespace Quiz
                             Console.WriteLine();
 
                             Respuesta = Console.ReadLine();
-                            if (Respuesta.ToLower() == "el botón" || Respuesta.ToLower() == "un botón")
+                            if (Respuesta.ToLower() == "el boton" || Respuesta.ToLower() == "un boton" || Respuesta.ToLower() == "boton")
                             {
 
                                 RespuestaCorrecta = true;
@@ -128,7 +128,7 @@ namespace Quiz
                             Console.WriteLine();
 
                             Respuesta = Console.ReadLine();
-                            if (Respuesta.ToLower() == "el pez" || Respuesta.ToLower() == "un pez")
+                            if (Respuesta.ToLower() == "el pez" || Respuesta.ToLower() == "un pez" || Respuesta.ToLower() == "pez")
                             {
 
                                 RespuestaCorrecta = true;
@@ -147,7 +147,7 @@ namespace Quiz
                             Console.WriteLine();
 
                             Respuesta = Console.ReadLine();
-                            if (Respuesta.ToLower() == "el canguro" || Respuesta.ToLower() == "un canguro")
+                            if (Respuesta.ToLower() == "el canguro" || Respuesta.ToLower() == "un canguro" || Respuesta.ToLower() == "canguro")
                             {
 
                                 RespuestaCorrecta = true;
@@ -166,7 +166,7 @@ namespace Quiz
                             Console.WriteLine();
 
                             Respuesta = Console.ReadLine();
-                            if (Respuesta.ToLower() == "La ardilla" || Respuesta.ToLower() == "una ardilla")
+                            if (Respuesta.ToLower() == "la ardilla" || Respuesta.ToLower() == "una ardilla" || Respuesta.ToLower() == "ardilla")
                             {
 
                                 RespuestaCorrecta = true;
@@ -185,7 +185,8 @@ namespace Quiz
                             Console.WriteLine();
 
                             Respuesta = Console.ReadLine();
-                            if (Respuesta.ToLower() == "la escuela" || Respuesta.ToLower() == "el colegio")
+                            if (Respuesta.ToLower() == "la escuela" || Respuesta.ToLower() == "el colegio" || Respuesta.ToLower() == "colegio" 
+                                || Respuesta.ToLower() == "escuela")
                             {
 
                                 RespuestaCorrecta = true;
@@ -204,7 +205,7 @@ namespace Quiz
                             Console.WriteLine();
 
                             Respuesta = Console.ReadLine();
-                            if (Respuesta.ToLower() == "La m" || Respuesta.ToLower() == "m")
+                            if (Respuesta.ToLower() == "la m" || Respuesta.ToLower() == "m")
                             {
 
                                 RespuestaCorrecta = true;
@@ -292,7 +293,7 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "La rosa" || Respuesta == "una rosa")
+                        if (Respuesta == "la rosa" || Respuesta == "una rosa" || Respuesta.ToLower() == "rosa")
                         {
                             RespuestaCorrecta = true;
                         }
@@ -308,7 +309,7 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "El girasol" || Respuesta == "un girasol")
+                        if (Respuesta == "el girasol" || Respuesta == "un girasol" || Respuesta.ToLower() == "girasol")
                         {
                             RespuestaCorrecta = true;
                         }
@@ -324,7 +325,7 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "el peine" || Respuesta == "un peine")
+                        if (Respuesta == "el peine" || Respuesta == "un peine" || Respuesta.ToLower() == "peine")
                         {
                             RespuestaCorrecta = true;
                         }
@@ -340,7 +341,7 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "Las lentejas" || Respuesta == "lentejas")
+                        if (Respuesta == "las lentejas" || Respuesta == "lentejas" || Respuesta.ToLower() == "unas lentejas")
                         {
                             RespuestaCorrecta = true;
                         }
@@ -356,7 +357,7 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "el corazón" || Respuesta == "corazón")
+                        if (Respuesta == "el corazon" || Respuesta == "corazon")
                         {
                             RespuestaCorrecta = true;
                         }
@@ -371,7 +372,7 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "el libro" || Respuesta == "libro")
+                        if (Respuesta == "el libro" || Respuesta == "libro" || Respuesta.ToLower() == "un libro")
                         {
                             RespuestaCorrecta = true;
                         }
@@ -386,7 +387,7 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "la taza" || Respuesta == "una taza")
+                        if (Respuesta == "la taza" || Respuesta == "una taza" || Respuesta.ToLower() == "taza")
                         {
                             RespuestaCorrecta = true;
                         }
@@ -401,7 +402,7 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "la pasta de dientes" || Respuesta == "pasta de dientes")
+                        if (Respuesta == "la pasta de dientes" || Respuesta == "pasta de dientes" || Respuesta.ToLower() == "una pasta de dientes")
                         {
                             RespuestaCorrecta = true;
                         }
@@ -417,7 +418,7 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "el espejo" || Respuesta == "un espejo")
+                        if (Respuesta == "el espejo" || Respuesta == "un espejo" || Respuesta == "espejo")
                         {
                             RespuestaCorrecta = true;
                         }
@@ -437,7 +438,7 @@ namespace Quiz
                     concursante.Puntos += 1;
                 }
                 // Se elimina el número de la pregunta anteriormente dada para evitar repetidos
-                preguntasBasicas.RemoveAt(preguntaAleatoria);
+                preguntasIntermedias.RemoveAt(preguntaAleatoria);
             }
 
 
@@ -453,7 +454,7 @@ namespace Quiz
         public override void Avanzado(Concursante concursante)
         {
             // Primero se comprueba si quedan preguntas en esta categoría
-            if (preguntasBasicas.Count == 0)
+            if (preguntasAvanzadas.Count == 0)
             {
                 Console.WriteLine("¡No hay más preguntas en esta categoría!");
             }
@@ -461,7 +462,7 @@ namespace Quiz
             else
             {
                 Random pregunta = new Random(); // Instancia para generar números aleatorios
-                int preguntaAleatoria = pregunta.Next(preguntasBasicas.Count); // Genera la pregunta aleatoria
+                int preguntaAleatoria = pregunta.Next(preguntasAvanzadas.Count); // Genera la pregunta aleatoria
                 // Accedemos al número de pregunta aleatoria mediante el índice generado
                 switch (preguntasAvanzadas[preguntaAleatoria])
                 {
@@ -473,7 +474,7 @@ namespace Quiz
 
                         Respuesta = Console.ReadLine(); // se lee la respuesta del usuario
                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "la jeringa" || Respuesta.ToLower() == "una jeringa")
+                        if (Respuesta.ToLower() == "la jeringa" || Respuesta.ToLower() == "una jeringa" || Respuesta.ToLower() == "jeringa")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -508,7 +509,7 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "el chicle" || Respuesta == "un chicle")
+                        if (Respuesta == "el chicle" || Respuesta == "un chicle" || Respuesta.ToLower() == "chicle")
                         {
                             RespuestaCorrecta = true;
                         }
@@ -541,7 +542,7 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "bañarse" || Respuesta == "bañarse")
+                        if (Respuesta == "bañarse")
                         {
                             RespuestaCorrecta = true;
                         }
@@ -557,7 +558,7 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "un rifle" || Respuesta == "el rifle")
+                        if (Respuesta == "un rifle" || Respuesta == "el rifle" || Respuesta.ToLower() == "rifle")
                         {
                             RespuestaCorrecta = true;
                         }
@@ -574,7 +575,7 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "un calcetin " || Respuesta == "el calcetin")
+                        if (Respuesta == "un calcetin " || Respuesta == "el calcetin" || Respuesta.ToLower() == "calcetin")
                         {
                             RespuestaCorrecta = true;
                         }
@@ -590,13 +591,13 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "el ojo" || Respuesta == "ojo")
+                        if (Respuesta == "el ojo" || Respuesta == "ojo" || Respuesta.ToLower() == "unos ojos")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: UEL OJO");
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: !EL OJO¡");
                         }
                         break;
                     case (9):
@@ -613,7 +614,7 @@ namespace Quiz
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: LOS COCOS (MAL PENSADO ;)");
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: LOS COCOS :D");
                         }
                         break;
                     case (10):
@@ -624,7 +625,7 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "un retrato" || Respuesta == "un cuadro")
+                        if (Respuesta == "un retrato" || Respuesta == "un cuadro" || Respuesta.ToLower() == "cuadro" || Respuesta.ToLower() == "retrato")
                         {
                             RespuestaCorrecta = true;
                         }
@@ -644,7 +645,7 @@ namespace Quiz
                     concursante.Puntos += 1;
                 }
                 // Se elimina el número de la pregunta anteriormente dada para evitar repetidos
-                preguntasBasicas.RemoveAt(preguntaAleatoria);
+                preguntasAvanzadas.RemoveAt(preguntaAleatoria);
             }
 
 
