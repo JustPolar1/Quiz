@@ -595,7 +595,7 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "c" || Respuesta == "operación overlord" || Respuesta == "operación overlord")
+                        if (Respuesta == "c" || Respuesta == "operacion overlord" || Respuesta == "operación overlord")
                         {
                             RespuestaCorrecta = true;
                         }
