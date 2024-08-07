@@ -545,147 +545,145 @@ namespace Quiz
                         }
                         break;
                     case (4):
-                        Console.WriteLine("Tengo un par, van colgando y al caminar se van desplazando ¿Qué son?");
-                        Console.WriteLine("\ta) ");
-                        Console.WriteLine("\tb) ");
-                        Console.WriteLine("\tc) ");
-                        Console.WriteLine("\td) ");
+                        Console.WriteLine("¿En qué año comenzó la Segunda Guerra Mundial?");
+                        Console.WriteLine("\ta) 1937");
+                        Console.WriteLine("\tb) 1938");
+                        Console.WriteLine("\tc) 1939");
+                        Console.WriteLine("\td) 1940");
                         Console.Write("Escribe tu respuesta: ");
 
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "los brazos" || Respuesta == "brazos")
+                        if (Respuesta == "c" || Respuesta == "1939")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: LOS BRAZOS");
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era c) 1939");
                         }
                         break;
                     case (5):
-                        Console.WriteLine("Una vez al día es manía, una vez por semana es cosa sana, una vez por mes " +
-                            "es dejadez, una vez por año se te oxida el caño. ¿Qué es?");
-                        Console.WriteLine("\ta) ");
-                        Console.WriteLine("\tb) ");
-                        Console.WriteLine("\tc) ");
-                        Console.WriteLine("\td) ");
+                        Console.WriteLine("¿Qué país fue invadido por Alemania para iniciar la Segunda Guerra Mundial?");
+                        Console.WriteLine("\ta) Francia");
+                        Console.WriteLine("\tb) Checoslovaquia");
+                        Console.WriteLine("\tc) Austria");
+                        Console.WriteLine("\td) Polonia");
                         Console.Write("Escribe tu respuesta: ");
 
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "bañarse" || Respuesta == "bañarse")
+                        if (Respuesta == "d" || Respuesta == "polonia")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: BAÑARSE");
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era d) Polonia");
                         }
                         break;
                     case (6):
-                        Console.WriteLine("Es largo y duro, lo utilizan los hombres y mujeres y siempre da batalla ¿Qué es?");
-                        Console.WriteLine("\ta) ");
-                        Console.WriteLine("\tb) ");
-                        Console.WriteLine("\tc) ");
-                        Console.WriteLine("\td) ");
+                        Console.WriteLine("¿Cuál fue el nombre en clave de la invasión aliada en Normandía en 1944");
+                        Console.WriteLine("\ta) Operación Torch");
+                        Console.WriteLine("\tb) Operación Barbarroja");
+                        Console.WriteLine("\tc) Operación Overlord");
+                        Console.WriteLine("\td) Operación Market Garden");
                         Console.Write("Escribe tu respuesta: ");
 
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "un rifle" || Respuesta == "el rifle")
+                        if (Respuesta == "c" || Respuesta == "operación overlord" || Respuesta == "operación overlord")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: EL RIFLE");
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era c) Operación Overlord");
                         }
                         break;
                     case (7):
-                        Console.WriteLine("Es suave por dentro y peludo por fuera. Con un poco de esfuerzo lo podras meter " +
-                            "dentro. ¿Qué es?");
-                        Console.WriteLine("\ta) ");
-                        Console.WriteLine("\tb) ");
-                        Console.WriteLine("\tc) ");
-                        Console.WriteLine("\td) ");
+                        Console.WriteLine("¿En qué año tuvo lugar la Revolución Rusa?");
+                        Console.WriteLine("\ta) 1905");
+                        Console.WriteLine("\tb) 1914");
+                        Console.WriteLine("\tc) 1917");
+                        Console.WriteLine("\td) 1921");
                         Console.Write("Escribe tu respuesta: ");
 
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "un calcetin " || Respuesta == "el calcetin")
+                        if (Respuesta == "c " || Respuesta == "1917")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: EL CALCETÍN");
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era c) 1917");
                         }
                         break;
                     case (8):
-                        Console.WriteLine("Pelos por arriba y pelos por debajo, en el medio una rajita húmeda. ¿Qué es?");
-                        Console.WriteLine("\ta) ");
-                        Console.WriteLine("\tb) ");
-                        Console.WriteLine("\tc) ");
-                        Console.WriteLine("\td) ");
+                        Console.WriteLine("¿Cuál fue el nombre del proyecto secreto estadounidense para" + 
+                            "desarrollar la bomba atómica durante la Segunda Guerra Mundial");
+                        Console.WriteLine("\ta) Proyecto Manhattan");
+                        Console.WriteLine("\tb) Proyecto Mercury");
+                        Console.WriteLine("\tc) Proyecto Apolo");
+                        Console.WriteLine("\td) Proyecto Trinity");
                         Console.Write("Escribe tu respuesta: ");
 
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "el ojo" || Respuesta == "ojo")
+                        if (Respuesta == "a" || Respuesta == "proyecto manhattan")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: UEL OJO");
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era a) Proyecto Manhattan");
                         }
                         break;
                     case (9):
-                        Console.WriteLine("Bolas grandes, colgantes, gordas y peludas que son voluminosas y hermosas. " +
+                        Console.WriteLine("¿En qué año cayó el Muro de Berlín, marcando el fin simbólico de la Guerra Fría?" +
                             "¿Qué es?");
-                        Console.WriteLine("\ta) ");
-                        Console.WriteLine("\tb) ");
-                        Console.WriteLine("\tc) ");
-                        Console.WriteLine("\td) ");
+                        Console.WriteLine("\ta) 1987");
+                        Console.WriteLine("\tb) 1988");
+                        Console.WriteLine("\tc) 1989");
+                        Console.WriteLine("\td) 1990");
                         Console.Write("Escribe tu respuesta: ");
 
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "los cocos" || Respuesta == "cocos")
+                        if (Respuesta == "c" || Respuesta == "1989")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: LOS COCOS (MAL PENSADO ;)");
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era c) 1989");
                         }
                         break;
                     case (10):
-                        Console.WriteLine("Bolas grandes, colgantes, gordas y peludas que son voluminosas y hermosas. " +
-                            "¿Qué es?");
-                        Console.WriteLine("\ta) ");
-                        Console.WriteLine("\tb) ");
-                        Console.WriteLine("\tc) ");
-                        Console.WriteLine("\td) ");
+                        Console.WriteLine("¿Qué evento llevó a los Estados Unidos a entrar en la Segunda Guerra Mundial?");
+                        Console.WriteLine("\ta) La invasión de Polonia");
+                        Console.WriteLine("\tb) El ataque a Pearl Harbor");
+                        Console.WriteLine("\tc) La batalla de Midway");
+                        Console.WriteLine("\td) El día D");
                         Console.Write("Escribe tu respuesta: ");
 
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "los cocos" || Respuesta == "cocos")
+                        if (Respuesta == "b" || Respuesta == "el ataque a pearl harbor")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: LOS COCOS");
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era b) El ataque a Pearl Harbor");
                         }
                         break;
                     default:
