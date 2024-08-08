@@ -10,6 +10,7 @@ namespace Quiz
     {
         static void Main(string[] args)
         {
+            Console.Title = "Juego de quizes";
             // Definición de variables útiles para el programa
             bool multijugador = false; // Nos hará saber si el juego es multijugador o singleplayer
             bool seguirCiclo = true; // Variable útil para saber cuándo parar nuestros ciclos en la interfaz
@@ -38,13 +39,7 @@ namespace Quiz
             Historia historia = new Historia();
             Matematicas matematicas = new Matematicas();
 
-            for (int i = 0; i < 30; i++)
-            {
-               Console.WriteLine(nAleatorio.Next(6));
-            }
-            Console.ReadKey();
-
-            Console.WriteLine("¡Bienvenido al juego de Quizzes interactivo!");
+            Console.WriteLine("¡Bienvenido al juego de Quizes interactivo!");
             do // Ciclo principal, donde todo el programa se ejecuta
             {
                 nQuizes = 6;
@@ -247,6 +242,8 @@ namespace Quiz
                 medias = n; // 0
                 
                 dificiles = nQuizes - 1; // 3
+
+                Console.Title = $"Juego de quizes, ronda: {ronda}";
 
                 for (; faciles > 0; faciles--)
                 {

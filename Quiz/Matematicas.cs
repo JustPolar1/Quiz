@@ -295,7 +295,7 @@ namespace Quiz
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "25cm^2" || Respuesta == "25 centimetros cuadrados")
+                        if (RespuestaMath == 25)
                         {
                             RespuestaCorrecta = true;
                         }
@@ -311,7 +311,7 @@ namespace Quiz
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "4" || Respuesta == "cuatro")
+                        if (RespuestaMath == 4 )
                         {
                             RespuestaCorrecta = true;
                         }
@@ -327,7 +327,7 @@ namespace Quiz
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "12" || Respuesta == "doce")
+                        if (RespuestaMath == 12)
                         {
                             RespuestaCorrecta = true;
                         }
@@ -343,7 +343,7 @@ namespace Quiz
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "6" || Respuesta == "seis")
+                        if (RespuestaMath == 6)
                         {
                             RespuestaCorrecta = true;
                         }
@@ -359,7 +359,7 @@ namespace Quiz
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "32cm" || Respuesta == "treinta y dos centimetros")
+                        if (RespuestaMath == 32)
                         {
                             RespuestaCorrecta = true;
                         }
@@ -375,7 +375,7 @@ namespace Quiz
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "197.92cm^3" || Respuesta == "197.92cm cubicos")
+                        if (RespuestaMath == 197.92f)
                         {
                             RespuestaCorrecta = true;
                         }
@@ -391,13 +391,13 @@ namespace Quiz
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "5" || Respuesta == "cinco")
+                        if (RespuestaMath == 5)
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era cinco 5");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era cinco (5)");
                         }
                         break;
                     case (10):
@@ -407,7 +407,7 @@ namespace Quiz
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "720°" || Respuesta == "setescientos veinte grados")
+                        if (RespuestaMath == 720)
                         {
                             RespuestaCorrecta = true;
                         }

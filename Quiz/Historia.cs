@@ -73,7 +73,7 @@ namespace Quiz
                         break;
                     case (3):
                         Console.WriteLine("Pregunta 3");
-                        Console.WriteLine("¿A que imperio indigena se enfrentó y conquistó el español Hernán Cortés?");
+                        Console.WriteLine("¿A qué imperio indígena se enfrentó y conquistó el español Hernán Cortés?");
                         Console.WriteLine("\ta) Imperio Mexica");
                         Console.WriteLine("\tb) Imperio Azteca");
                         Console.WriteLine("\tc) Imperio Purépechas");
@@ -95,7 +95,7 @@ namespace Quiz
                         break;
                     case (4):
                         Console.WriteLine("¿En qué fecha empezó la Revolución Mexicana?");
-                        Console.WriteLine("\ta) 20 de noviembre de 1912 ");
+                        Console.WriteLine("\ta) 20 de noviembre de 1912");
                         Console.WriteLine("\tb) 18 de noviembre de 1910");
                         Console.WriteLine("\tc) 20 de noviembre de 1910");
                         Console.WriteLine("\td) 18 de noviembre de 1912");
@@ -113,7 +113,7 @@ namespace Quiz
                         }
                         break;
                     case (5):
-                        Console.WriteLine("¿Quién dió el 'Grito de Dolores'?");
+                        Console.WriteLine("¿Quién dio el 'Grito de Dolores'?");
                         Console.WriteLine("\ta) Ignacio Allende");
                         Console.WriteLine("\tb) Guadalupe Victoria");
                         Console.WriteLine("\tc) Miguel Hidalgo");
@@ -170,7 +170,7 @@ namespace Quiz
                         }
                         break;
                     case (8):
-                        Console.WriteLine("¿Cuántos Niños Heroes eran?");
+                        Console.WriteLine("¿Cuántos Niños Héroes eran?");
                         Console.WriteLine("\ta) 5");
                         Console.WriteLine("\tb) 6");
                         Console.WriteLine("\tc) 8");
@@ -265,7 +265,7 @@ namespace Quiz
                 switch (preguntasIntermedias[preguntaAleatoria])
                 {
                     case (1):
-                        Console.WriteLine("¿Cuales fueron los ultimos dos paises que lograron la independencia de España a finales del siglo XIX?");
+                        Console.WriteLine("¿Cuáles fueron los últimos dos países que lograron la independencia de España a finales del siglo XIX?");
                         Console.WriteLine("\ta) Cuba y Venezuela");
                         Console.WriteLine("\tb) Paraguay y Colombia");
                         Console.WriteLine("\tc) Cuba y Puerto Rico");
@@ -284,12 +284,12 @@ namespace Quiz
                         else
                         {
                             // En caso de que no haya acertado se le informa al usuario
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era !EL HUMNO¡ :D ");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era c) Cuba y Puerto Rico");
                         }
                         break;
                     // Las demás preguntas deberán tener un formato similar
                     case (2):
-                        Console.WriteLine("¿Quien pronuncio la frase 'Maldito sea el soldado que vuelva las armas contra su pueblo'?");
+                        Console.WriteLine("¿Quién pronunció la frase 'Maldito sea el soldado que vuelva las armas contra su pueblo'?");
                         Console.WriteLine("\ta) José de San Martin");
                         Console.WriteLine("\tb) Simón Bolivar");
                         Console.WriteLine("\tc) Hugo Chávez");
@@ -386,20 +386,20 @@ namespace Quiz
                     case (7):
                         Console.WriteLine("¿Qué país latinoamericano fue el último en abolir la esclavitud?");
                         Console.WriteLine("\ta) México");
-                        Console.WriteLine("\tb) Brasil");
+                        Console.WriteLine("\tb) Brásil");
                         Console.WriteLine("\tc) Argentina");
                         Console.WriteLine("\td) Chile");
                         Console.Write("Escribe tu respuesta: ");
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "b" || Respuesta == "brasil")
+                        if (Respuesta == "b" || Respuesta == "brasil" || Respuesta.ToLower() == "brásil")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era b) Brasil");
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era b) Brásil");
                         }
                         break;
                     case (8):
@@ -501,7 +501,7 @@ namespace Quiz
                 switch (preguntasAvanzadas[preguntaAleatoria])
                 {
                     case (1):
-                        Console.WriteLine("¿En que año comenzó la Primera Guerra Mundial");
+                        Console.WriteLine("¿En qué año comenzó la Primera Guerra Mundial");
                         Console.WriteLine("\ta) 1912");
                         Console.WriteLine("\tb) 1914");
                         Console.WriteLine("\tc) 1916");
@@ -541,7 +541,7 @@ namespace Quiz
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era b) Plan Schlieffen");
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era a) Plan Schlieffen");
                         }
                         break;
                     case (3):
@@ -646,7 +646,7 @@ namespace Quiz
                         break;
                     case (8):
                         Console.WriteLine("¿Cuál fue el nombre del proyecto secreto estadounidense para" + 
-                            "desarrollar la bomba atómica durante la Segunda Guerra Mundial");
+                            " desarrollar la bomba atómica durante la Segunda Guerra Mundial");
                         Console.WriteLine("\ta) Proyecto Manhattan");
                         Console.WriteLine("\tb) Proyecto Mercury");
                         Console.WriteLine("\tc) Proyecto Apolo");
@@ -666,8 +666,7 @@ namespace Quiz
                         }
                         break;
                     case (9):
-                        Console.WriteLine("¿En qué año cayó el Muro de Berlín, marcando el fin simbólico de la Guerra Fría?" +
-                            "¿Qué es?");
+                        Console.WriteLine("¿En qué año cayó el Muro de Berlín, marcando el fin simbólico de la Guerra Fría?");
                         Console.WriteLine("\ta) 1987");
                         Console.WriteLine("\tb) 1988");
                         Console.WriteLine("\tc) 1989");

@@ -36,9 +36,6 @@ namespace Quiz
         // Cada método de cada categoría generará UNA pregunta aleatoria de esa categoría dependiendo la dificultad
         public virtual void Basico(Concursante concursante)
         { 
-            // hola prueba
-
-
             // Primero se comprueba si quedan preguntas en esta categoría
             if (preguntasBasicas.Count == 0)
             {
@@ -64,7 +61,7 @@ namespace Quiz
 
                         Console.WriteLine();
                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta.ToLower() == "a" || Respuesta.ToLower() == "Montevideo")
+                        if (Respuesta.ToLower() == "a" || Respuesta.ToLower() == "montevideo")
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -72,12 +69,12 @@ namespace Quiz
                         else
                         {
                             // En caso de que no haya acertado se le informa al usuario
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era Montevideo");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era a) Montevideo");
                         }
                         break;
                     // Las demás preguntas deberán tener un formato similar
                     case (2):
-                        Console.WriteLine("¿En qué país está el famosos Machu Pichu?");
+                        Console.WriteLine("¿En qué país está el famoso Machu Picchu?");
                         Console.WriteLine("\ta) Chile");
                         Console.WriteLine("\tb) Estados Unidos");
                         Console.WriteLine("\tc) Perú");
@@ -90,7 +87,7 @@ namespace Quiz
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: Perú");
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era c) Perú");
                         }
                         break;
                     case (3):
@@ -101,13 +98,13 @@ namespace Quiz
                         Console.WriteLine("\td) Berlín");
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "c" || Respuesta == "peru" || Respuesta == "perú")
+                        if (Respuesta == "c" || Respuesta == "moscow" || Respuesta == "moscú" || Respuesta == "moscu")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era: Perú");
+                            Console.WriteLine("¡Respuesta incorrecta!, la respuesta correcta era c) Moscow");
                         }
                         break;
                     case (5):
@@ -145,7 +142,7 @@ namespace Quiz
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era b) Pacífico");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era a) Rusia");
                         }
                         break;
                     case (6):
@@ -234,7 +231,7 @@ namespace Quiz
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! las medusas no poseen un corazón");
+                            Console.WriteLine("¡Respuesta incorrecta! las medusas no poseen un corazón, al igual que tu ex :D");
                         }
                         break;
                     default:
@@ -315,7 +312,7 @@ namespace Quiz
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era c) 42");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era c) 42Km");
                         }
                         break;
                     case (3):
@@ -371,7 +368,7 @@ namespace Quiz
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era c) Leonardo Da Vinci");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era c) Deja Vu");
                         }
                         break;
                     case (6):
@@ -510,7 +507,7 @@ namespace Quiz
                     case (1):
                         Console.WriteLine("¿Qué unidad de medida mide fuerza?");
                         Console.WriteLine("\ta) Kilogramos");
-                        Console.WriteLine("\tb) Pascuales");
+                        Console.WriteLine("\tb) Pascales");
                         Console.WriteLine("\tc) Voltaje");
                         Console.WriteLine("\td) Newtons");
                         Console.Write("Escribe tu respuesta: ");
@@ -654,7 +651,7 @@ namespace Quiz
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta!Aunque es un mito popular, la Gran Muralla China no es fácilmente visible desde el espacio sin ayuda");
+                            Console.WriteLine("¡Respuesta incorrecta! Aunque es un mito popular, la Gran Muralla China no es fácilmente visible desde el espacio sin ayuda");
                         }
                         break;
                     case (9):
