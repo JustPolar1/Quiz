@@ -16,7 +16,7 @@ namespace Quiz
         private float respuestaMath;
 
         public float RespuestaMath { get => respuestaMath; set => respuestaMath = value; }
-        private bool seguirCiclo = false;
+        private bool seguirCiclo = true;
         protected List<int> preguntasBasicas = new List<int>()
         {
             1, 2, 3, 4, 5, 6, 7, 8, 9, 10
@@ -48,6 +48,7 @@ namespace Quiz
                 int preguntaAleatoria = pregunta.Next(preguntasBasicas.Count); // Genera la pregunta aleatoria
                 Console.WriteLine("¡Pregunta fácil!");
                 // Accedemos al número de pregunta aleatoria mediante el índice generado
+                seguirCiclo = true;
                 while (seguirCiclo)
                 {
                     try
@@ -216,7 +217,6 @@ namespace Quiz
                         Console.WriteLine("Por favor, escribe únicamente números");
                         Console.ReadKey(true);
                         Console.Clear();
-                        seguirCiclo = true;
                     }
                     catch (OverflowException)
                     {
@@ -224,7 +224,6 @@ namespace Quiz
                         Console.WriteLine("Escribiste muchos números!");
                         Console.ReadKey(true);
                         Console.Clear();
-                        seguirCiclo = true;
                     }
                 }
                 // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
@@ -261,6 +260,8 @@ namespace Quiz
                 Random pregunta = new Random(); // Instancia para generar números aleatorios
                 int preguntaAleatoria = pregunta.Next(preguntasIntermedias.Count); // Genera la pregunta aleatoria
                 Console.WriteLine("¡Pregunta intermedia!");
+
+                seguirCiclo = true;
                 // Accedemos al número de pregunta aleatoria mediante el índice generado
                 while (seguirCiclo)
                 {
@@ -437,7 +438,6 @@ namespace Quiz
                         Console.WriteLine("Por favor, escribe únicamente números");
                         Console.ReadKey(true);
                         Console.Clear();
-                        seguirCiclo = true;
                     }
                     catch (OverflowException)
                     {
@@ -445,7 +445,6 @@ namespace Quiz
                         Console.WriteLine("Escribiste muchos números!");
                         Console.ReadKey(true);
                         Console.Clear();
-                        seguirCiclo = true;
                     }
                 }
                 // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
@@ -482,6 +481,7 @@ namespace Quiz
                 Random pregunta = new Random(); // Instancia para generar números aleatorios
                 int preguntaAleatoria = pregunta.Next(preguntasAvanzadas.Count); // Genera la pregunta aleatoria
                 Console.WriteLine("¡Pregunta avanzada!");
+                seguirCiclo = true;
                 // Accedemos al número de pregunta aleatoria mediante el índice generado
                 while (seguirCiclo)
                 {
@@ -655,7 +655,6 @@ namespace Quiz
                         Console.WriteLine("Por favor, escribe únicamente números");
                         Console.ReadKey(true);
                         Console.Clear();
-                        seguirCiclo = true;
                     }
                     catch (OverflowException)
                     {
@@ -663,7 +662,6 @@ namespace Quiz
                         Console.WriteLine("Escribiste muchos números!");
                         Console.ReadKey(true);
                         Console.Clear();
-                        seguirCiclo = true;
                     }
                 }
                 // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
