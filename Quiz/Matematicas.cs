@@ -148,18 +148,18 @@ namespace Quiz
                                 }
                                 break;
                             case (7):
-                                Console.WriteLine("¿Qué es un melómano?");
-                                Console.Write("Escribe tu respuesta: ");
+                                Console.WriteLine("¿A cuántos años equivale un lustro?");
+                                Console.Write("Escribe tu respuesta (únicamente números): ");
 
 
-                                Respuesta = Console.ReadLine().ToLower();
-                                if (Respuesta == "c" || Respuesta == "musica" || Respuesta == "amante de la musica" || Respuesta == "música" || Respuesta == "amante de la música")
+                                RespuestaMath = float.Parse (Console.ReadLine());
+                                if (RespuestaMath == 5)
                                 {
                                     RespuestaCorrecta = true;
                                 }
                                 else
                                 {
-                                    Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era c) Amante de la música");
+                                    Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 5 años");
                                 }
                                 break;
                             case (8):
@@ -257,7 +257,7 @@ namespace Quiz
                 switch (preguntasIntermedias[preguntaAleatoria])
                 {
                     case (1):
-                        Console.WriteLine("¿Cuál es el valor de x dada la siguiente ecuacion?: 10 + x = 15");
+                        Console.WriteLine("¿Cuál es el valor de x dada la siguiente ecuación?: 10 + x = 15");
                         Console.Write("Escribe tu respuesta: ");
 
                         RespuestaMath = float.Parse(Console.ReadLine()); // se lee la respuesta del usuario
@@ -276,8 +276,8 @@ namespace Quiz
                         break;
                     // Las demás preguntas deberán tener un formato similar
                     case (2): // Esta se deja
-                        Console.WriteLine("¿Cual es el valor de x dada la siguiente ecuacion: x^2 = 9?");
-                        Console.Write("Escribe tu respuesta: ");
+                        Console.WriteLine("¿Cuál es el valor de x dada la siguiente ecuación: x^2 = 9?");
+                        Console.Write("Escribe tu respuesta (únicamente números): ");
 
                         RespuestaMath = float.Parse(Console.ReadLine());
                         if (RespuestaMath == 3)
@@ -290,9 +290,8 @@ namespace Quiz
                         }
                         break;
                     case (3):
-                        Console.WriteLine("¿Cual es el area de un triangulo con base de 10cm y altura de 5cm?");
+                        Console.WriteLine("¿Cuál es el área de un triángulo con base de 10cm y altura de 5cm?");
                         Console.Write("Escribe tu respuesta: ");
-
 
                         RespuestaMath = float.Parse(Console.ReadLine());
                         if (RespuestaMath == 25)
@@ -305,13 +304,13 @@ namespace Quiz
                         }
                         break;
                     case (4):
-                        Console.WriteLine("¿si un numero es multiplicado por 3 y se le suman 12 y el resultado es 24 cual es el numero?");
+                        Console.WriteLine("¿si un número es multiplicado por 3 y se le suman 12 y el resultado es 24 cuál es el número?");
                         
-                        Console.Write("Escribe tu respuesta: ");
+                        Console.Write("Escribe tu respuesta (únicamente números): ");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (RespuestaMath == 4 )
+                        if (RespuestaMath == 4)
                         {
                             RespuestaCorrecta = true;
                         }
@@ -321,9 +320,9 @@ namespace Quiz
                         }
                         break;
                     case (5):
-                        Console.WriteLine("¿Cual es el valor de la raiz de 144?");
+                        Console.WriteLine("¿Cuál es el valor de la raíz de 144?");
                         
-                        Console.Write("Escribe tu respuesta: ");
+                        Console.Write("Escribe tu respuesta (únicamente números): ");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
@@ -333,13 +332,13 @@ namespace Quiz
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era doce");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 12");
                         }
                         break;
                     case (6):
-                        Console.WriteLine("¿Cual es la mediana de los siguientes numeros 4,8,6,5,7?");
+                        Console.WriteLine("¿Cuál es la mediana de los siguientes números 4,8,6,5,7?");
                         
-                        Console.Write("Escribe tu respuesta: ");
+                        Console.Write("Escribe tu respuesta (únicamente números): ");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
@@ -353,9 +352,9 @@ namespace Quiz
                         }
                         break;
                     case (7):
-                        Console.WriteLine("¿Cual es el perimetro de un rectangulo con longitud de 10cm y ancho de 6cm?");
+                        Console.WriteLine("¿Cuál es el perímetro de un rectángulo con longitud de 10cm y ancho de 6cm?");
                        
-                        Console.Write("Escribe tu respuesta: ");
+                        Console.Write("Escribe tu respuesta (únicamente números): ");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
@@ -373,7 +372,6 @@ namespace Quiz
                       
                         Console.Write("Escribe tu respuesta: ");
 
-
                         RespuestaMath = float.Parse(Console.ReadLine());
                         if (RespuestaMath == 197.92f)
                         {
@@ -385,7 +383,7 @@ namespace Quiz
                         }
                         break;
                     case (9):
-                        Console.WriteLine("¿Cuál es el valor de la ecuacion 2x-3=7?");
+                        Console.WriteLine("¿Cuál es el valor de la ecuación 2x-3=7?");
                        
                         Console.Write("Escribe tu respuesta: ");
 
@@ -401,9 +399,9 @@ namespace Quiz
                         }
                         break;
                     case (10):
-                        Console.WriteLine("¿Cual es el valor de la suma de los angulos internos de un hexagono?");
+                        Console.WriteLine("¿Cuál es el valor de la suma de los ángulos internos de un hexágono?");
                         
-                        Console.WriteLine("Escribe tu respuesta");
+                        Console.WriteLine("Escribe tu respuesta (únicamente números)");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
@@ -457,17 +455,14 @@ namespace Quiz
                 switch (preguntasAvanzadas[preguntaAleatoria])
                 {
                     case (1):
-                        Console.WriteLine("¿Qué unidad de medida mide fuerza?");
-                        Console.WriteLine("\ta) Kilogramos");
-                        Console.WriteLine("\tb) Pascales");
-                        Console.WriteLine("\tc) Voltaje");
-                        Console.WriteLine("\td) Newtons");
-                        Console.Write("Escribe tu respuesta: ");
+                        Console.WriteLine("En un trángulo rectángulo, la hipotenusamide 10cm y uno de los catetos mide " +
+                            "6cm. ¿Cuál es la longitud del otro cateto?");
+                        Console.Write("Escribe tu respuesta (únicamente números): ");
 
                         RespuestaMath = float.Parse(Console.ReadLine()); // se lee la respuesta del usuario
                         Console.WriteLine();
                         // Se evalúa si se dio una respuesta correcta o no
-                        if (Respuesta == "c" || Respuesta == "newton" || Respuesta == "newtons")
+                        if (RespuestaMath == 8)
                         {
                             // Se activa la variable que determina si se ganó la ronda
                             RespuestaCorrecta = true;
@@ -475,164 +470,143 @@ namespace Quiz
                         else
                         {
                             // En caso de que no haya acertado se le informa al usuario
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era d) Newtons");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 8cm");
                         }
                         break;
                     // Las demás preguntas deberán tener un formato similar
                     case (2): // Esta se deja
-                        Console.WriteLine("¿Cuál es el valor de la constante pi?");
-                        Console.WriteLine("\ta) 1.6180");
-                        Console.WriteLine("\tb) 2.7182");
-                        Console.WriteLine("\tc) 3.1416");
-                        Console.WriteLine("\tc) 3/4");
-                        Console.Write("Escribe tu respuesta: ");
+                        Console.WriteLine("Un ángulo agudo mide 30 grados. ¿Cuál es la medida de su complemento?");
+                        Console.Write("Escribe tu respuesta (únicamente números): ");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "c" || Respuesta == "3.1416" || Respuesta == "3.14")
+                        if (RespuestaMath == 60)
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era c) 3.1416");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 60 grados");
                         }
                         break;
                     case (3):
-                        Console.WriteLine("¿Quién fue Thomas Alva Edison?");
-                        Console.WriteLine("\ta) Un físico que desarrolló la teoría de la relatividad");
-                        Console.WriteLine("\tb) Un inventor y empresario estadounidense conocido por sus trabajos en electricidad y comunicaciones");
-                        Console.WriteLine("\tc) Un matemático que descubrió el teorema de los números primos");
-                        Console.WriteLine("\td) Un químico que desarrolló la teoría de los gases ideales");
+                        Console.WriteLine("En un triángulo equilátero, la longitud de cada lado es de 10 cm " 
+                            +"¿Cuál es la altura del triángulo?");
                         Console.Write("Escribe tu respuesta: ");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "b")
+                        if (RespuestaMath == 8.66f)
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era b) Un inventor y empresario estadounidense conocido por sus trabajos en electricidad y comunicaciones");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 8.66 cm");
                         }
                         break;
                     case (4):
-                        Console.WriteLine("¿Qué es un plano inclinado?");
-                        Console.WriteLine("\ta) Un tipo de fuerza que actúa en dirección perpendicular al suelo");
-                        Console.WriteLine("\tb) Una superficie plana que está inclinada con respecto a la horizontal y se utiliza para levantar objetos con menor esfuerzo");
-                        Console.WriteLine("\tc) Un dispositivo que convierte la energía cinética en energía potencial");
-                        Console.WriteLine("\td) Una técnica para medir la velocidad de un objeto en movimiento");
-                        Console.Write("Escribe tu respuesta: ");
+                        Console.WriteLine("Resuelve la ecuación cuadrática: x^2 + 5x - 6 = 0");
+                        Console.Write("Escribe tu respuesta (Ej. x = a, x = b IMPORTANTE: Respetar espacios y comas): ");
 
 
-                        RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "b")
+                        Respuesta = Console.ReadLine();
+                        if (Respuesta == "x = -6, x = 1" || Respuesta == "x=-6,x=1" || Respuesta == "x=-6, x=1")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era b) Una superficie plana que está inclinada con respecto a la horizontal y se utiliza para levantar objetos con menor esfuerzo");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era x = -6, x = 1");
                         }
                         break;
                     case (5):
-                        Console.WriteLine("¿Qué significan las siglas CPU en las computadoras?");
-                        Console.WriteLine("\ta) Central Processing Unit (Unidad Central de Procesamiento)");
-                        Console.WriteLine("\tb) Computer Peripheral Unit (Unidad Periférica de Computadora)");
-                        Console.WriteLine("\tc) Central Programming Unit (Unidad Central de Programación)");
-                        Console.Write("Escribe tu respuesta: ");
+                        Console.WriteLine("Encuentra el valor de x en la ecuación: 2x + 5 = 11 - 3x");
+                        Console.Write("Escribe tu respuesta (Ej. x = a IMPORTANTE: Respetar espacios): ");
 
 
-                        RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "a" || Respuesta == "unidad central de procesamiento" || Respuesta == "central processing unit")
+                        Respuesta = Console.ReadLine();
+                        if (Respuesta == "x = 2" || Respuesta == "x=2" || Respuesta == "2")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era a) Central Processing Unit (Unidad Central de Procesamiento)");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era x = 2");
                         }
                         break;
                     case (6):
-                        Console.WriteLine("¿Qué es el sistema binario");
-                        Console.WriteLine("\ta) Un sistema de numeración que utiliza diez dígitos del 0 al 9");
-                        Console.WriteLine("\tb) Un sistema de codificación de caracteres basado en letras y símbolos");
-                        Console.WriteLine("\tc) Un sistema de numeración que utiliza dos dígitos: 0 y 1");
-                        Console.WriteLine("\td) Un sistema de medidas que se utiliza en la ingeniería electrónica");
-                        Console.Write("Escribe tu respuesta: ");
+                        Console.WriteLine("Resuelve el sistema de ecuaciones: x + 2y = 7, 3x - 2y = 5");
+                       
+                        Console.Write("Escribe tu respuesta (Ej. x = a, x = b IMPORTANTE: Respetar espacios y comas): ");
 
 
-                        RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "c")
+                        Respuesta = Console.ReadLine();
+                        if (Respuesta == "x = 3, y = 2" || Respuesta == "x=3,y=2" || Respuesta == "x=3, y=2")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era a) Un sistema de numeración que utiliza dos dígitos: 0 y 1");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era x = 3, y = 2");
                         }
                         break;
                     case (7):
-                        Console.WriteLine("¿Qué significan las siglas IP");
-                        Console.WriteLine("\ta) Input Port (Puerto de Entrada)");
-                        Console.WriteLine("\tb) Internal Processor (Procesador Interno)");
-                        Console.WriteLine("\tc) Information Pathway (Vía de Información)");
-                        Console.WriteLine("\td) Internet Protocol (Protocolo de Internet)");
-                        Console.Write("Escribe tu respuesta: ");
+                        Console.WriteLine("Encuentra el valor de x en la ecuación: x^2 - 4x - 3 = 0");
+                        Console.Write("Escribe tu respuesta (Ej. x = a, x = b IMPORTANTE: Respetar espacios y comas): ");
 
 
-                        RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "d" || Respuesta == "internet protocol" || Respuesta == "protocolo de internet")
+                        Respuesta = Console.ReadLine();
+                        if (Respuesta == "x = -1, x = 3" || Respuesta == " x=-1,x=3" || Respuesta == " x=-1, x=3")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era d) Internet Protocol (Protocolo de Internet)");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era x = -1, x = 3");
                         }
                         break;
                     case (8): // Esta también se deja
-                        Console.WriteLine("¿Es cierto que la gran muralla china puede verse desde el espacio?: ");
-                        Console.Write("¿Sí o no?: ");
+                        Console.WriteLine("Resuelve la ecuación exponencial: 2^x = 16");
+                        Console.Write("Escribe tu respuesta (Ej. x = a IMPORTANTE: Respetar espacios): ");
 
-                        RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "no")
+                        Respuesta = Console.ReadLine();
+                        if (Respuesta == "x = 4" ||  Respuesta == "x=4" || Respuesta == "4")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta!Aunque es un mito popular, la Gran Muralla China no es fácilmente visible desde el espacio sin ayuda");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era x = 4");
                         }
                         break;
                     case (9):
-                        Console.WriteLine("¿El pintor Vincent van Gogh cortó su propia oreja?");
-                        Console.Write("¿Sí o no?: ");
+                        Console.WriteLine(" Encuentra el valor de x en la ecuación: x^2 + 2x - 6 = 0");
+                        Console.Write("Escribe tu respuesta (Ej. x = a, x = b IMPORTANTE: Respetar espacios y comas): ");
 
 
-                        RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "si" || Respuesta == "sí")
+                        Respuesta = Console.ReadLine();
+                        if (Respuesta == "x = -3, x = 2" || Respuesta == "x=-3,x=2" ||Respuesta == "x=-3, x=2")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! Van Gogh se cortó una parte de su oreja en un episodio de crisis mental.");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era x = -3, x = 2");
                         }
                         break;
                     case (10):
-                        Console.WriteLine("La primera película de animación en color fue \"Blancanieves y los siete enanitos\"?");
-                        Console.Write("¿Sí o no?: ");
+                        Console.WriteLine("7. Resuelve el sistema de ecuaciones: x - 2y = -3 2x + 3y = 7");
+                        Console.Write("Escribe tu respuesta (Ej. x = a, x = b IMPORTANTE: Respetar espacios y comas): ");
 
-                        RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "no")
+                        Respuesta = Console.ReadLine();
+                        if (Respuesta == "x = 1, y = 2" || Respuesta == "x=1,y=2" || Respuesta == "x=1, y=2")
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! \"Blancanieves y los siete enanitos\" fue la primera película de animación en largometraje, pero no fue la primera en color.\nLa primera película de animación en color fue \"Steamboat Willie\" de Disney.");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era x = 1, y = 2");
                         }
                         break;
                     default:
