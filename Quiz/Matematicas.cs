@@ -459,7 +459,7 @@ namespace Quiz
                     case (1):
                         Console.WriteLine("¿Qué unidad de medida mide fuerza?");
                         Console.WriteLine("\ta) Kilogramos");
-                        Console.WriteLine("\tb) Pascuales");
+                        Console.WriteLine("\tb) Pascales");
                         Console.WriteLine("\tc) Voltaje");
                         Console.WriteLine("\td) Newtons");
                         Console.Write("Escribe tu respuesta: ");
