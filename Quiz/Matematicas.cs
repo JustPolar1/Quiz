@@ -293,9 +293,8 @@ namespace Quiz
                         Console.WriteLine("¿Cuál es el área de un triángulo con base de 10cm y altura de 5cm?");
                         Console.Write("Escribe tu respuesta: ");
 
-
-                        Respuesta = Console.ReadLine();
-                        if (Respuesta == "25cm^2" || Respuesta == "25 centimetros cuadrados")
+                        RespuestaMath = float.Parse(Console.ReadLine());
+                        if (RespuestaMath == 25)
                         {
                             RespuestaCorrecta = true;
                         }
@@ -373,9 +372,8 @@ namespace Quiz
                       
                         Console.Write("Escribe tu respuesta: ");
 
-
-                        Respuesta = Console.ReadLine();
-                        if (Respuesta == "197.92cm^3" || Respuesta == "197.92cm cubicos")
+                        RespuestaMath = float.Parse(Console.ReadLine());
+                        if (RespuestaMath == 197.92f)
                         {
                             RespuestaCorrecta = true;
                         }
@@ -397,7 +395,7 @@ namespace Quiz
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 5");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era cinco (5)");
                         }
                         break;
                     case (10):

@@ -230,16 +230,11 @@ namespace Quiz
                             break;
                         default:
                             break;
-
-
-
                     }
                 }
                 catch (Exception)
                 {
                     Console.WriteLine("Parece que hubo un error");
-
-
                 }
                     // Cuando se ganó la ronda se le informa al usuario y se le suma un punto al concursante
                 if (RespuestaCorrecta)
@@ -475,6 +470,8 @@ namespace Quiz
             {
                 Random pregunta = new Random(); // Instancia para generar números aleatorios
                 int preguntaAleatoria = pregunta.Next(preguntasAvanzadas.Count); // Genera la pregunta aleatoria
+
+                Console.WriteLine("¡Pregunta avanzada (de edad, probablemente +18)!");
                 // Accedemos al número de pregunta aleatoria mediante el índice generado
                 switch (preguntasAvanzadas[preguntaAleatoria])
                 {
