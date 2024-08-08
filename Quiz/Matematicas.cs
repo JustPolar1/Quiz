@@ -490,7 +490,7 @@ namespace Quiz
                         switch (preguntasAvanzadas[preguntaAleatoria])
                         {
                             case (1):
-                                Console.WriteLine("En un trángulo rectángulo, la hipotenusamide 10cm y uno de los catetos mide " +
+                                Console.WriteLine("En un trángulo rectángulo, la hipotenusa mide 10cm y uno de los catetos mide " +
                                     "6cm. ¿Cuál es la longitud del otro cateto?");
                                 Console.Write("Escribe tu respuesta (únicamente números): ");
 
@@ -556,18 +556,18 @@ namespace Quiz
                                 }
                                 break;
                             case (5):
-                                Console.WriteLine("Encuentra el valor de x en la ecuación: 2x + 5 = 11 - 3x");
-                                Console.Write("Escribe tu respuesta (Ej. x = a IMPORTANTE: Respetar espacios): ");
+                                Console.WriteLine("Encuentra el valor de x en la ecuación:(3 -5) * (7 - 6)");
+                                Console.Write("Escribe tu respuesta: ");
 
 
-                                Respuesta = Console.ReadLine().ToLower();
-                                if (Respuesta == "x = 2" || Respuesta == "x=2" || Respuesta == "2")
+                                RespuestaMath = float.Parse(Console.ReadLine());
+                                if (RespuestaMath == -2)
                                 {
                                     RespuestaCorrecta = true;
                                 }
                                 else
                                 {
-                                    Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era x = 2");
+                                    Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era -2");
                                 }
                                 break;
                             case (6):
@@ -577,7 +577,7 @@ namespace Quiz
 
 
                                 Respuesta = Console.ReadLine().ToLower();
-                                if (Respuesta == "x = 3, y = 2" || Respuesta == "x=3,y=2" || Respuesta == "x=3, y=2")
+                                if (Respuesta == "x = 3, y = 2" || Respuesta == "x=3,y=2" || Respuesta == "x=3, y=2" || Respuesta == "3, 2")
                                 {
                                     RespuestaCorrecta = true;
                                 }
@@ -587,18 +587,18 @@ namespace Quiz
                                 }
                                 break;
                             case (7):
-                                Console.WriteLine("Encuentra el valor de x en la ecuación: x^2 - 4x - 3 = 0");
-                                Console.Write("Escribe tu respuesta (Ej. x = a, x = b IMPORTANTE: Respetar espacios y comas): ");
+                                Console.WriteLine("Encuentra el valor de x en la ecuación: x^4 - 4x^3 + 6x^2 - 4x + 1");
+                                Console.Write("Escribe tu respuesta (Ej. x = a IMPORTANTE: Respetar espacios): ");
 
 
                                 Respuesta = Console.ReadLine().ToLower();
-                                if (Respuesta == "x = -1, x = 3" || Respuesta == " x=-1,x=3" || Respuesta == " x=-1, x=3")
+                                if (Respuesta == "x = 1" || Respuesta == "x=1" || Respuesta == "1") 
                                 {
                                     RespuestaCorrecta = true;
                                 }
                                 else
                                 {
-                                    Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era x = -1, x = 3");
+                                    Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era x = -1 o x = 3");
                                 }
                                 break;
                             case (8): // Esta también se deja
@@ -616,26 +616,26 @@ namespace Quiz
                                 }
                                 break;
                             case (9):
-                                Console.WriteLine(" Encuentra el valor de x en la ecuación: x^2 + 2x - 6 = 0");
+                                Console.WriteLine(" Encuentra el valor de x en la ecuación: x^2 + 2x - 3 = 0");
                                 Console.Write("Escribe tu respuesta (Ej. x = a, x = b IMPORTANTE: Respetar espacios y comas): ");
 
 
                                 Respuesta = Console.ReadLine().ToLower();
-                                if (Respuesta == "x = -3, x = 2" || Respuesta == "x=-3,x=2" ||Respuesta == "x=-3, x=2")
+                                if (Respuesta == "x = -3" || Respuesta == "x=-3" ||Respuesta == "-3")
                                 {
                                     RespuestaCorrecta = true;
                                 }
                                 else
                                 {
-                                    Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era x = -3, x = 2");
+                                    Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era x = -3");
                                 }
                                 break;
                             case (10):
-                                Console.WriteLine("7. Resuelve el sistema de ecuaciones: x - 2y = -3 2x + 3y = 7");
-                                Console.Write("Escribe tu respuesta (Ej. x = a, x = b IMPORTANTE: Respetar espacios y comas): ");
+                                Console.WriteLine("Resuelve el sistema de ecuaciones: x - 2y = -3, 2x + 3y = 8");
+                                Console.Write("Escribe tu respuesta (Ej. x = a, y = b IMPORTANTE: Respetar espacios y comas): ");
 
                                 Respuesta = Console.ReadLine().ToLower();
-                                if (Respuesta == "x = 1, y = 2" || Respuesta == "x=1,y=2" || Respuesta == "x=1, y=2")
+                                if (Respuesta == "x = 1, y = 2" || Respuesta == "x=1,y=2" || Respuesta == "x=1, y=2" || Respuesta == "1, 2")
                                 {
                                     RespuestaCorrecta = true;
                                 }
