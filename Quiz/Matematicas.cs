@@ -542,17 +542,17 @@ namespace Quiz
                                 break;
                             case (4):
                                 Console.WriteLine("Resuelve la ecuación cuadrática: x^2 + 5x - 6 = 0");
-                                Console.Write("Escribe tu respuesta (Ej. x = a, x = b IMPORTANTE: Respetar espacios y comas): ");
+                                Console.Write("Escribe tu respuesta (Ej. x = a IMPORTANTE: Respetar espacios): ");
 
 
                                 Respuesta = Console.ReadLine().ToLower();
-                                if (Respuesta == "x = -6, x = 1" || Respuesta == "x=-6,x=1" || Respuesta == "x=-6, x=1")
+                                if (Respuesta == "x = -6" || Respuesta == "x = 1" || Respuesta == "x=-6" || Respuesta == "x=1" || Respuesta == "1" || Respuesta == "-6")
                                 {
                                     RespuestaCorrecta = true;
                                 }
                                 else
                                 {
-                                    Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era x = -6, x = 1");
+                                    Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era x = -6 o x = 1");
                                 }
                                 break;
                             case (5):
@@ -573,7 +573,7 @@ namespace Quiz
                             case (6):
                                 Console.WriteLine("Resuelve el sistema de ecuaciones: x + 2y = 7, 3x - 2y = 5");
                        
-                                Console.Write("Escribe tu respuesta (Ej. x = a, x = b IMPORTANTE: Respetar espacios y comas): ");
+                                Console.Write("Escribe tu respuesta (Ej. x = a, y = b IMPORTANTE: Respetar espacios y comas): ");
 
 
                                 Respuesta = Console.ReadLine().ToLower();
