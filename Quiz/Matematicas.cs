@@ -165,7 +165,7 @@ namespace Quiz
                                 break;
                             case (8):
                                 Console.WriteLine("¿Cuál es el resultado de la siguiente operación?: 5.2 - 7.8");
-                                Console.Write("Escribe tu respuesta: ");
+                                Console.Write("Escribe tu respuesta (Solo 1 decimales): ");
 
                                 RespuestaMath = float.Parse(Console.ReadLine());
                                 if (RespuestaMath == -2.6f)
@@ -383,7 +383,7 @@ namespace Quiz
                             case (8): // Esta también se deja
                                 Console.WriteLine("¿Si un cilindro tiene un radio de 3cm y una altura de 7cm cual es su volumen?");
 
-                                Console.Write("Escribe tu respuesta: ");
+                                Console.Write("Escribe tu respuesta (Solo 2 decimales): ");
 
                                 RespuestaMath = float.Parse(Console.ReadLine());
                                 if (RespuestaMath == 197.92f)
@@ -527,7 +527,7 @@ namespace Quiz
                             case (3):
                                 Console.WriteLine("En un triángulo equilátero, la longitud de cada lado es de 10 cm " 
                                     +"¿Cuál es la altura del triángulo?");
-                                Console.Write("Escribe tu respuesta: ");
+                                Console.Write("Escribe tu respuesta (Solo 2 decimales): ");
 
 
                                 RespuestaMath = float.Parse(Console.ReadLine());
