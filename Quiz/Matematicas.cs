@@ -148,18 +148,18 @@ namespace Quiz
                                 }
                                 break;
                             case (7):
-                                Console.WriteLine("¿Qué es un melómano?");
-                                Console.Write("Escribe tu respuesta: ");
+                                Console.WriteLine("¿A cuántos años equivale un lustro?");
+                                Console.Write("Escribe tu respuesta (únicamente números): ");
 
 
-                                Respuesta = Console.ReadLine().ToLower();
-                                if (Respuesta == "c" || Respuesta == "musica" || Respuesta == "amante de la musica" || Respuesta == "música" || Respuesta == "amante de la música")
+                                RespuestaMath = float.Parse (Console.ReadLine());
+                                if (RespuestaMath == 5)
                                 {
                                     RespuestaCorrecta = true;
                                 }
                                 else
                                 {
-                                    Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era c) Amante de la música");
+                                    Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 5 años");
                                 }
                                 break;
                             case (8):
@@ -257,7 +257,7 @@ namespace Quiz
                 switch (preguntasIntermedias[preguntaAleatoria])
                 {
                     case (1):
-                        Console.WriteLine("¿Cuál es el valor de x dada la siguiente ecuacion?: 10 + x = 15");
+                        Console.WriteLine("¿Cuál es el valor de x dada la siguiente ecuación?: 10 + x = 15");
                         Console.Write("Escribe tu respuesta: ");
 
                         RespuestaMath = float.Parse(Console.ReadLine()); // se lee la respuesta del usuario
@@ -276,8 +276,8 @@ namespace Quiz
                         break;
                     // Las demás preguntas deberán tener un formato similar
                     case (2): // Esta se deja
-                        Console.WriteLine("¿Cual es el valor de x dada la siguiente ecuacion: x^2 = 9?");
-                        Console.Write("Escribe tu respuesta: ");
+                        Console.WriteLine("¿Cuál es el valor de x dada la siguiente ecuación: x^2 = 9?");
+                        Console.Write("Escribe tu respuesta (únicamente números): ");
 
                         RespuestaMath = float.Parse(Console.ReadLine());
                         if (RespuestaMath == 3)
@@ -305,9 +305,9 @@ namespace Quiz
                         }
                         break;
                     case (4):
-                        Console.WriteLine("¿si un numero es multiplicado por 3 y se le suman 12 y el resultado es 24 cual es el numero?");
+                        Console.WriteLine("¿si un número es multiplicado por 3 y se le suman 12 y el resultado es 24 cuál es el número?");
                         
-                        Console.Write("Escribe tu respuesta: ");
+                        Console.Write("Escribe tu respuesta (únicamente números): ");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
@@ -323,7 +323,7 @@ namespace Quiz
                     case (5):
                         Console.WriteLine("¿Cuál es el valor de la raíz de 144?");
                         
-                        Console.Write("Escribe tu respuesta: ");
+                        Console.Write("Escribe tu respuesta (únicamente números): ");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
@@ -333,17 +333,17 @@ namespace Quiz
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era doce");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 12");
                         }
                         break;
                     case (6):
-                        Console.WriteLine("¿Cual es la mediana de los siguientes numeros 4,8,6,5,7?");
+                        Console.WriteLine("¿Cuál es la mediana de los siguientes números 4,8,6,5,7?");
                         
-                        Console.Write("Escribe tu respuesta: ");
+                        Console.Write("Escribe tu respuesta (únicamente números): ");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "6" || Respuesta == "seis")
+                        if (RespuestaMath == 6)
                         {
                             RespuestaCorrecta = true;
                         }
@@ -353,13 +353,13 @@ namespace Quiz
                         }
                         break;
                     case (7):
-                        Console.WriteLine("¿Cual es el perimetro de un rectangulo con longitud de 10cm y ancho de 6cm?");
+                        Console.WriteLine("¿Cuál es el perímetro de un rectángulo con longitud de 10cm y ancho de 6cm?");
                        
-                        Console.Write("Escribe tu respuesta: ");
+                        Console.Write("Escribe tu respuesta (únicamente números): ");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "32cm" || Respuesta == "treinta y dos centimetros")
+                        if (RespuestaMath == 32)
                         {
                             RespuestaCorrecta = true;
                         }
@@ -374,7 +374,7 @@ namespace Quiz
                         Console.Write("Escribe tu respuesta: ");
 
 
-                        RespuestaMath = float.Parse(Console.ReadLine());
+                        Respuesta = Console.ReadLine();
                         if (Respuesta == "197.92cm^3" || Respuesta == "197.92cm cubicos")
                         {
                             RespuestaCorrecta = true;
@@ -385,29 +385,29 @@ namespace Quiz
                         }
                         break;
                     case (9):
-                        Console.WriteLine("¿Cuál es el valor de la ecuacion 2x-3=7?");
+                        Console.WriteLine("¿Cuál es el valor de la ecuación 2x-3=7?");
                        
                         Console.Write("Escribe tu respuesta: ");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "5" || Respuesta == "cinco")
+                        if (RespuestaMath == 5)
                         {
                             RespuestaCorrecta = true;
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era cinco 5");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era 5");
                         }
                         break;
                     case (10):
-                        Console.WriteLine("¿Cual es el valor de la suma de los angulos internos de un hexagono?");
+                        Console.WriteLine("¿Cuál es el valor de la suma de los ángulos internos de un hexágono?");
                         
-                        Console.WriteLine("Escribe tu respuesta");
+                        Console.WriteLine("Escribe tu respuesta (únicamente números)");
 
 
                         RespuestaMath = float.Parse(Console.ReadLine());
-                        if (Respuesta == "720°" || Respuesta == "setescientos veinte grados")
+                        if (RespuestaMath == 720)
                         {
                             RespuestaCorrecta = true;
                         }
