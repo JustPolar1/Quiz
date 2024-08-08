@@ -38,11 +38,6 @@ namespace Quiz
             Historia historia = new Historia();
             Matematicas matematicas = new Matematicas();
 
-            for (int i = 0; i < 30; i++)
-            {
-               Console.WriteLine(nAleatorio.Next(6));
-            }
-            Console.ReadKey();
 
             Console.WriteLine("¡Bienvenido al juego de Quizzes interactivo!");
             do // Ciclo principal, donde todo el programa se ejecuta

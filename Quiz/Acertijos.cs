@@ -570,7 +570,7 @@ namespace Quiz
 
 
                         Respuesta = Console.ReadLine().ToLower();
-                        if (Respuesta == "un rifle" || Respuesta == "el rifle" || Respuesta.ToLower() == "rifle")
+                        if (Respuesta == "un rifle" || Respuesta == "el rifle" || Respuesta == "rifle")
                         {
                             RespuestaCorrecta = true;
                         }

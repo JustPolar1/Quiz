@@ -31,7 +31,6 @@ namespace Quiz
         };
 
         // Cada método de cada categoría generará UNA pregunta aleatoria de esa categoría dependiendo la dificultad
-        private float RespuestaMath;
         public override void Basico(Concursante concursante)
         {
             // hola prueba
