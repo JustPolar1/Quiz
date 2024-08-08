@@ -204,7 +204,7 @@ namespace Quiz
                         }
                         else
                         {
-                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era d)21 de noviembre de 1838");
+                            Console.WriteLine("¡Respuesta incorrecta! la respuesta correcta era a) 21 de noviembre de 1838");
                         }
                         break;
                     case (10):
