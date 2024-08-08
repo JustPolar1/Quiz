@@ -556,7 +556,7 @@ namespace Quiz
                                 }
                                 break;
                             case (5):
-                                Console.WriteLine("Encuentra el valor de x en la ecuación:(3 -5) * (7 - 6)");
+                                Console.WriteLine("Resuelve la siguiente operación:(3 -5) * (7 - 6)");
                                 Console.Write("Escribe tu respuesta: ");
 
 
