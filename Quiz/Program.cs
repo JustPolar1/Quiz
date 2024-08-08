@@ -357,7 +357,7 @@ namespace Quiz
                         Thread.Sleep(1000);
                     }
                 }
-
+                Console.Clear();
             } while (!terminar); // Todo el programa se ejecutará hasta que la variable de terminar sea verdadera
         }
     }
