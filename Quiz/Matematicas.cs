@@ -108,7 +108,7 @@ namespace Quiz
                                 Console.Write("Escribe tu respuesta: ");
 
 
-                                Respuesta = Console.ReadLine().ToLower();
+                                RespuestaMath = float.Parse(Console.ReadLine());
                                 if (RespuestaMath == 1534)
                                 {
                                     RespuestaCorrecta = true;
@@ -545,7 +545,7 @@ namespace Quiz
                                 Console.Write("Escribe tu respuesta (Ej. x = a, x = b IMPORTANTE: Respetar espacios y comas): ");
 
 
-                                Respuesta = Console.ReadLine();
+                                Respuesta = Console.ReadLine().ToLower();
                                 if (Respuesta == "x = -6, x = 1" || Respuesta == "x=-6,x=1" || Respuesta == "x=-6, x=1")
                                 {
                                     RespuestaCorrecta = true;
@@ -560,7 +560,7 @@ namespace Quiz
                                 Console.Write("Escribe tu respuesta (Ej. x = a IMPORTANTE: Respetar espacios): ");
 
 
-                                Respuesta = Console.ReadLine();
+                                Respuesta = Console.ReadLine().ToLower();
                                 if (Respuesta == "x = 2" || Respuesta == "x=2" || Respuesta == "2")
                                 {
                                     RespuestaCorrecta = true;
@@ -576,7 +576,7 @@ namespace Quiz
                                 Console.Write("Escribe tu respuesta (Ej. x = a, x = b IMPORTANTE: Respetar espacios y comas): ");
 
 
-                                Respuesta = Console.ReadLine();
+                                Respuesta = Console.ReadLine().ToLower();
                                 if (Respuesta == "x = 3, y = 2" || Respuesta == "x=3,y=2" || Respuesta == "x=3, y=2")
                                 {
                                     RespuestaCorrecta = true;
@@ -591,7 +591,7 @@ namespace Quiz
                                 Console.Write("Escribe tu respuesta (Ej. x = a, x = b IMPORTANTE: Respetar espacios y comas): ");
 
 
-                                Respuesta = Console.ReadLine();
+                                Respuesta = Console.ReadLine().ToLower();
                                 if (Respuesta == "x = -1, x = 3" || Respuesta == " x=-1,x=3" || Respuesta == " x=-1, x=3")
                                 {
                                     RespuestaCorrecta = true;
@@ -605,7 +605,7 @@ namespace Quiz
                                 Console.WriteLine("Resuelve la ecuación exponencial: 2^x = 16");
                                 Console.Write("Escribe tu respuesta (Ej. x = a IMPORTANTE: Respetar espacios): ");
 
-                                Respuesta = Console.ReadLine();
+                                Respuesta = Console.ReadLine().ToLower();
                                 if (Respuesta == "x = 4" ||  Respuesta == "x=4" || Respuesta == "4")
                                 {
                                     RespuestaCorrecta = true;
@@ -620,7 +620,7 @@ namespace Quiz
                                 Console.Write("Escribe tu respuesta (Ej. x = a, x = b IMPORTANTE: Respetar espacios y comas): ");
 
 
-                                Respuesta = Console.ReadLine();
+                                Respuesta = Console.ReadLine().ToLower();
                                 if (Respuesta == "x = -3, x = 2" || Respuesta == "x=-3,x=2" ||Respuesta == "x=-3, x=2")
                                 {
                                     RespuestaCorrecta = true;
@@ -634,7 +634,7 @@ namespace Quiz
                                 Console.WriteLine("7. Resuelve el sistema de ecuaciones: x - 2y = -3 2x + 3y = 7");
                                 Console.Write("Escribe tu respuesta (Ej. x = a, x = b IMPORTANTE: Respetar espacios y comas): ");
 
-                                Respuesta = Console.ReadLine();
+                                Respuesta = Console.ReadLine().ToLower();
                                 if (Respuesta == "x = 1, y = 2" || Respuesta == "x=1,y=2" || Respuesta == "x=1, y=2")
                                 {
                                     RespuestaCorrecta = true;
